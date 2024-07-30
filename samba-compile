@@ -1,0 +1,18 @@
+### Packages + smb.conf + krb5.conf + Updates
+
+mv /etc/samba/smb.conf /etc/samba/smb.conf.old 
+mv /etc/krb5.conf /etc/krb5.conf.old 
+
+mkdir -p /samba-4.20.0 
+cd ../../samba-4.20.0 (I was in a home user folder)  
+
+wget https://download.samba.org/pub/samba/stable/samba-4.20.0.tar.gz 
+tar -zxf samba-4.20.0.tar.gz 
+cd samba-4.20.0 
+
+dnf install epel-release -y  (installing Enterprise Repo's) 
+dnf update -y 
+dnf config-manager --set-enabled powertools (on Rocky Linux Build 8.6)  
+dnf config-manager --set-enabled crb (on Rocky Linux Build 9.3) 
+dnf repolist
+
