@@ -27,3 +27,5 @@ dnf update -y
 ./configure --enable-selftest \ --with-piddir=/usr/local/samba/var/run \ --with-privatedir=/usr/local/samba/private \ --with-sockets-dir=/usr/local/samba/var/run \ --with-lockdir=/usr/local/samba/var/locks \ --with-statedir=/usr/local/samba/var \ --with-cachedir=/usr/local/samba/var/cache 
 make -j6 (6=core count)
 make install 
+ls /usr/local/samba/bin (should see lots of green entries) 
+ls /usr/local/samba/sbin (should see one line of green entry) 
