@@ -10,6 +10,7 @@ Security & Compliance Requirements: Many regulatory frameworks require detailed 
 Do not create a symbolic link to the generated krb5.conf file. In Samba 4.7 and later, the /usr/local/samba/private/ directory is no longer accessible by other users than the root user. If the file is a symbolic link, other users are not able to read the file and, for example, dynamic DNS updates fail if you use the BIND_DLZ DNS back end. Make sure that you provision the AD using a DNS domain that will not need to be changed. Samba does not support renaming the AD DNS zone and Kerberos realm. Do not use .local for the TLD, this is used by Avahi. 
 
 Samba AD is not compatible with other DNS servers, even if those that supports tkey-gss updates, because parts of Samba (like the DNS management RPC server and the domain join) assume the replicated DNS entries in the AD Database are the same as those exposed over DNS. Likewise the security of the system depends on the ACLs on each DNS entry in AD. LMDB (Lightning Memory-Mapped Database) library, which is necessary for Samba as an Active Directory Domain Controller and for running self-tests. Samba uses LMDB for storing certain types of data efficiently 
+
 ---
 ### Source Best Practice: 
 
