@@ -11,3 +11,17 @@ Linux FW + SSH Configuration:
 7) dnf install iptables-services -y 
 8) systemctl start iptables
 9) systemctl enable iptables 
+10) nano /etc/sysconfig/iptables 
+    # 
+    # Allow Samba, DNS, DHCP Access 
+    -A INPUT -p tcp  -s 0.0.0.0/24 -m state --state NEW -m multiport --dports 53,88,135,139,389,445,464,636,3268,49152:65535 -j ACCEPT 
+    -A INPUT -p udp -s 0.0.0.0/24 -m state --state NEW -m multiport --dports 53,123,137,138,389,636 -j ACCEPT 
+    # 
+    # Allow/Drop for SSH IP Addresses 
+    -A INPUT -p tcp -s 0.0.0.0/32 --dport 4193 -m state --state NEW -j ACCEPT 
+    # 
+    #DROP is more security focused REJECT gives away to much info 
+    -A INPUT -p tcp --dport 22 -j DROP  
+    #
+systemctl restart iptables 
+systemctl restart sshd **logout/login**
