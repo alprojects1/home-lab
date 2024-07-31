@@ -1,4 +1,4 @@
-***Home-brew + Permission Fix + bashrc:***
+***Home-brew + Permission Fix + bashrc***
 
 ```sh
 1) cp ~/.bashrc ~/.bashrc.backup  **always backup**
