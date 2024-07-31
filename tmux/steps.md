@@ -13,4 +13,4 @@
 10. sensors -v 
 11. nano /scripts/format_sensors.sh **please see .sh script**
 12. chmod +x /scripts/format_sensors.sh 
-13. watch -n 2 /scripts/format_sensors.sh
+13. watch -n2 /scripts/format_sensors.sh
