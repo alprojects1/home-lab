@@ -58,5 +58,24 @@
 8) testparm **passed** 
 9) klist **generated ticket**
 ```
-***
+***Chrony + Syslog + Local-7*** 
 
+```sh
+1) dnf install chrony -y **if not installed** 
+2) systemctl enable chronyd --now 
+3) systemctl restart chronyd 
+4) systemctl status chronyd 
+5) chronyc sources 
+6) chronyc tracking  
+7) chronyc ntpdata **since the last or current time sync** 
+8) nano /etc/rsyslog.conf 
+   local7.*    /var/log/samba-audit.log 
+9) nano /var/log/samba-audit.log **save and exit**
+10) chmod 644 /var/log/samba-audit.log (if its not already) 
+11) systemctl restart rsyslog 
+12) tail -f /var/log/samba-audit.log 
+13) tail -f /var/log/samba/10.100.100.253.log (this is present because logging is working correctly) 
+14) tail -f /var/log/samba/%m.log 
+15) tail -f /var/log/samba/smbd.log 
+16) tail -f /var/log/samba/winbindd.log (all tail commands showing normal operation) 
+```
