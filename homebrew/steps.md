@@ -13,4 +13,4 @@
 10) sudo touch /home/ms01/.bashrc 
 11) sudo chown ms01:ms01 /home/ms01/.bashrc **must be sudoer**
 12) source ~/.bashrc 
-13) brew --version 
+13) brew --version **4.3.10 for me**
