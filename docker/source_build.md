@@ -1,4 +1,4 @@
-***Docker + Permissions + Lxc:***
+***Docker + Permissions + Lxc***
 
 ```sh
 1) apt-get install apt-transport-https ca-certificates curl git gnupg lsb-release 
