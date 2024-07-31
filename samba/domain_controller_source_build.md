@@ -32,7 +32,7 @@
 11) ls /usr/local/samba/sbin **line of green entry** 
 12) samba -b | grep "CONFIGFILE" ** this will point to where conf is located**
 ```
-*** Provisioning + Bash Configuration + Resolv.conf  
+***Provisioning + Bash Configuration + Resolv.conf***  
 
 ```sh
 1) export PATH=/usr/local/samba/bin:/usr/local/samba/sbin:$PATH
@@ -66,16 +66,21 @@
 3) systemctl restart chronyd 
 4) systemctl status chronyd 
 5) chronyc sources 
-6) chronyc tracking  
-7) chronyc ntpdata **since the last or current time sync** 
-8) nano /etc/rsyslog.conf 
+6) chronyc tracking
+7) nano /etc/chrony.conf **for accuracy add more than one**
+   pool 0.pool.ntp.org iburst 
+   pool 1.pool.ntp.org iburst 
+   pool 3.pool.ntp.org iburst
+8) chronyc ntpdata **since the last or current time sync** 
+9) nano /etc/rsyslog.conf 
    local7.*    /var/log/samba-audit.log 
-9) nano /var/log/samba-audit.log **save and exit**
-10) chmod 644 /var/log/samba-audit.log (if its not already) 
-11) systemctl restart rsyslog 
-12) tail -f /var/log/samba-audit.log 
-13) tail -f /var/log/samba/10.100.100.253.log (this is present because logging is working correctly) 
-14) tail -f /var/log/samba/%m.log 
-15) tail -f /var/log/samba/smbd.log 
-16) tail -f /var/log/samba/winbindd.log (all tail commands showing normal operation) 
+10) nano /var/log/samba-audit.log **save and exit**
+11) chmod 644 /var/log/samba-audit.log (if its not already) 
+12) systemctl restart rsyslog 
+13) tail -f /var/log/samba-audit.log 
+14) tail -f /var/log/samba/0.0.0.0.log **this is present because logging is working correctly** 
+15) tail -f /var/log/samba/%m.log 
+16) tail -f /var/log/samba/smbd.log 
+17) tail -f /var/log/samba/winbindd.log (all tail commands showing normal operation)
 ```
+
