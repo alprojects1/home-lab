@@ -13,15 +13,11 @@ done
 
 echo 
 
- 
-
 # Initialize arrays to hold the temperature values and sensor details 
 
 declare -A core_temp 
 
 declare -A sensor_details 
-
- 
 
 # Parse the sensors output and fill the arrays 
 
@@ -73,8 +69,6 @@ for i in {0..15}; do
 
 done 
 
- 
-
 # Print Core temperatures with proper formatting 
 
 printf "%-15s" "Cores" 
@@ -86,8 +80,6 @@ for i in {0..15}; do
 done 
 
 echo 
-
- 
 
 # Print sensor details with proper formatting 
 
