@@ -1,0 +1,19 @@
+Windows POSH + Path + Configuration:
+
+ 
+set-ExecutionPolicy -List (choose best options for you) 
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser (prefer this but feel free to go unrestricted if you prefer) 
+winget install JanDeDobbeleer.OhMyPosh -s winget (installed POSH + Themes) 
+get-Command -Name oh-my-posh -ErrorAction SilentlyContinue (installation directory) 
+$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin" (add path) 
+oh-my-posh --version (checks out) 
+oh-my-posh font install (install from a select list. Beta as of writing) 
+manually installing fonts via nerdfont https://www.nerdfonts.com/ (CascadiaCode, Cascadia Mono, Iosevka, Hack, are some of the ones I've used) 
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget 
+remove-Item -Path $PROFILE -Force (If corrupted) 
+new-Item -Path $PROFILE -ItemType File -Force (new profile)  
+notepad $PROFILE (powershell profile) 
+oh-my-posh init pwsh | Invoke-Expression (default theme) 
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" | Invoke-Expression (pull from a themes folder) 
+location of theme is located in C:\Users\Gizmo\AppData\Local\Programs\oh-my-posh\themes (for me)  
+. $PROFILE (to reload profile which will error but still reload or just close and reopen) 
