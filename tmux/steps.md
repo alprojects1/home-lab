@@ -1,4 +1,4 @@
-***tmux + Compile + Path + pkgs/dependencies***
+***tmux + Compile + Path + Sessions + pkgs/dependencies***
 
 ```sh
 1) apt-get install git autoconf automake libtool pkg-config libevent-dev ncurses-dev build-essential -y **Debian distros**
@@ -14,4 +14,25 @@
 11) echo 'export PATH=/usr/local/bin:$PATH' >> ~/.profile
 12) source ~/.profile 
 13) tmux -V
-14) tmux **green banner session** 
+14) tmux **green banner session**
+15) cd /tmux   
+16) git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+17) git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect 
+18) 
+19)
+ 
+
+
+
+
+ 
+
+tmux source ~/.tmux.conf 
+
+Ctrl+a I (install the plugins, terminal pointer should blink) 
+
+ls ~/.tmux/plugins/ (should get "tpm" & "tmux-resurrect") 
+
+Bash history loop: 
+
+while read -r cmd; do history -s "$cmd"; done < ~/.bash_history (make sure your root) 
