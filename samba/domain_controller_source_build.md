@@ -42,6 +42,8 @@
 5) samba-tool domain provision --use-rfc2307 --interactive --option="interfaces= lo ens18" --option="bind interfaces only=yes" 
 6) samba **start it off**
 7) ps -ax | grep samba **long list**
+8) chown root:root /usr/local/samba/etc/smb.conf **if not already**
+9) chmod 640 /usr/local/samba/etc/smb.conf  **compiled location**
 ```
 ***Testing Configuration Aftermath***
 
@@ -56,4 +58,5 @@
 8) testparm **passed** 
 9) klist **generated ticket**
 ```
+***
 
