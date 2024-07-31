@@ -1,6 +1,5 @@
 #!/bin/bash 
 
-
 # lm sensor power draw & sensor info parsed data
 
 printf "%-15s" "Sensor" #keep it at 15, started from 20 
