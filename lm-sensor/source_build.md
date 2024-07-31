@@ -1,4 +1,4 @@
-***Lm-sensors Compile + Path + pkgs/dependencies:***
+***Lm-sensors Compile + Path + pkgs/dependencies***
 
 ```sh 
 1) apt install git build-essential libtool autotools-dev autoconf automake lm-sensors -y **Debian distros**
