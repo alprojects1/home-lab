@@ -19,6 +19,7 @@ Installing RSAT tools to manage the DC and AD services frontend, it's worth ment
 ### Source Best Practice:
 
 - When you extract source files directly to the root directory (`/`), it can lead to files being scattered across the system if the archive does not contain a top-level directory. This can make cleanup and management more difficult. Typically, it's better to extract source archives into a dedicated directory to keep your system organized and to avoid any unintended overwriting of system files or directories. A common practice is to use a directory like `/usr/src` or `/opt` for compiling software from source. This approach has several benefits:
+  
   - It keeps source files contained and easy to manage.
   - It avoids cluttering the root directory or accidentally overwriting important system files.
   - It makes it easier to delete or archive the source directory once you're done.
