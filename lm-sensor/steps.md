@@ -14,4 +14,4 @@
 11) sensors -v 
 12) nano /scripts/format_sensors.sh **please see .sh script**
 13) chmod +x /scripts/format_sensors.sh 
-14) watch -n2 /scripts/format_sensors.sh
+14) watch -n2 /scripts/format_sensors.sh **should see landscape format**
