@@ -1,1 +1,7 @@
+### HTOP
 
+**Htop (`short for Hisham's top`) is an interactive process viewer for Unix Based Systems, developed as a more user-friendly alternative to the top command under the GNU General Public License (GPL).** It provides a real-time, text-mode interface, with a comprehensive overview of system processes in a tabular format, which includes columns for process ID (PID), user, priority, nice value, virtual memory size, resident set size, shared memory size, state, CPU percentage, memory percentage, time, and command.  
+
+**It was written by Hisham Muhammad in 2004, he was motivated by the desire for a better process viewer than the traditional top command, particularly in terms of user interaction and visual presentation. The program is written in C programming language and utilizes the ncurses library to handle its interface.** Htop has a large user base and active development community and contributions are welcomed via its GitHub repository, where users can submit issues, request features, and contribute code. 
+
+**Because system monitoring interfaces are not standardized among Unix-like operating systems, much of htop's code must be rewritten for each operating system. Cross-platform, OpenBSD, FreeBSD and Mac OS X support was added in htop 2.0.** Solaris/Illumos/OpenIndiana support was added in 2.2.0. htop was forked by several developers as htop-dev, and with support from the original author, the homepage was later redirected to a new domain. I am on version 3.3.4 as of writhing. 
