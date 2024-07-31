@@ -7,10 +7,10 @@
 4) git clone https://github.com/tmux/tmux.git **Repo**
 5) cd tmux **ls -lah always, get use to structures**
 6) ./autogen.sh **runs autotools commands, generates configuration scripts, checks dependencies**
-7) ./configure **system Inspection, generate Makefiles, set configuration options**
+7) ./configure **system Inspection, generate Makefiles, configuration options**
 8) make -j6
 9) make install
-10) ls -l /usr/local/bin/ **htop & tmux should be present if so don't perform steps below**
+10) ls -l /usr/local/bin/ **htop tmux should be present, skip steps**
 11) echo 'export PATH=/usr/local/bin:$PATH' >> ~/.profile
 12) source ~/.profile 
 13) tmux -V
@@ -18,21 +18,6 @@
 15) cd /tmux   
 16) git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 17) git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect 
-18) 
-19)
- 
-
-
-
-
- 
-
-tmux source ~/.tmux.conf 
-
-Ctrl+a I (install the plugins, terminal pointer should blink) 
-
-ls ~/.tmux/plugins/ (should get "tpm" & "tmux-resurrect") 
-
-Bash history loop: 
-
-while read -r cmd; do history -s "$cmd"; done < ~/.bash_history (make sure your root) 
+18) Ctrl+a I **install plugins, terminal pointer should blink**
+19) ls ~/.tmux/plugins/ **should get tpm & tmux-resurrect**
+20)while read -r cmd; do history -s "$cmd"; done < ~/.bash_history **Bash history loop**
