@@ -1,0 +1,23 @@
+nano /etc/systemd/system/samba.service 
+
+  [Unit] 
+  Description=Samba AD Daemon 
+  Wants=network-online.target 
+  After=network.target network-online.target 
+
+  [Service] 
+  Type=forking 
+  ExecStart=/usr/local/samba/sbin/samba 
+  PIDFile=/usr/local/samba/var/run/samba.pid 
+  ExecReload=/bin/kill -HUP $MAINPID 
+
+  [Install] 
+  WantedBy=multi-user.target 
+
+systemctl daemon-reload 
+systemctl enable samba.service 
+restorecon -v /usr/local/samba/sbin/samba 
+systemctl start samba.service 
+systemctl status samba.service 
+ps -ax | grep samba **passed**  
+systemctl status samba.service  
