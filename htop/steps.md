@@ -1,4 +1,4 @@
-***htop/lm-sensors + Compile + Path + pkgs/dependencies on Rocky Linux 9.3 & Ubuntu 22.04:***
+***htop/lm-sensors + Compile + Path + pkgs/dependencies***
 
 ```sh
 1) apt-get install git libncursesw5-dev autotools-dev autoconf libtool pkg-config build-essential lm-sensors libsensors-dev -y **Debian based distros**
