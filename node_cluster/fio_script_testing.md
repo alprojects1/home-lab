@@ -5,7 +5,7 @@ https://fio.readthedocs.io/en/latest/fio_doc.html
 apt-get install fio **flexible I/O Tester** 
 
 **what this test is not doing: testing a single read/write cycle for the size of the file**  
-**what this test is doing: reads/writes for 60 seconds and then outputting the amount of data read/wrote** 
+**what this test is doing: reads/writes for 60 seconds and than outputting the amount of data read/wrote** 
 
  **4K Random Read/Write** 
 fio --name=rand_read --directory=/mnt --ioengine=libaio --rw=randread --bs=4k --direct=1 --size=1G --numjobs=4 --time_based --runtime=60 --group_reporting 
