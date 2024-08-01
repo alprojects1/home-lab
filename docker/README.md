@@ -1,4 +1,4 @@
-### Docker:
+### Docker
 
 **Docker is an open-source platform designed to automate the deployment, scaling, and management of applications in containers.** Containers are lightweight, portable, and self-sufficient units that include everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings.
 
