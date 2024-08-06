@@ -16,4 +16,5 @@
 9) docker --version **Docker version 27.1.1, build 6312585**
 10) docker run --privileged hello-world **on promox this will work with out adding "lxc.apparmor.profile: unconfined" "lxc.cgroup.devices.allow: a" and "lxc.cap.drop:" to the .conf file of lxc
 11) docker network ls  
-12) docker ps 
+12) docker ps
+apt-get purge docker-ce docker-ce-cli docker-ce-rootless-extras containerd.io **run cleanup if all working**
