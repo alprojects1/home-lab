@@ -11,7 +11,7 @@
 5) chmod a+r /etc/apt/keyrings/docker.gpg **permisions**
 6) apt-get update -y
 7) apt-get install docker-ce docker-ce-cli containerd.io -y
-8) systemctl status docker 
+8) systemctl status docker **green** 
 9) docker run --privileged hello-world **lxc will error if conf not set**
 10) docker network ls  
 11) docker ps 
