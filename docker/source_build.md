@@ -12,6 +12,6 @@
 6) apt-get update -y
 7) apt-get install docker-ce docker-ce-cli containerd.io -y
 8) systemctl status docker **green** 
-9) docker run --privileged hello-world **on promox this will work with out adding "lxc.apparmor.profile: unconfined" "lxc.cgroup.devices.allow: a" and "lxc.cap.drop:" 
+9) docker run --privileged hello-world **on promox this will work with out adding "lxc.apparmor.profile: unconfined" "lxc.cgroup.devices.allow: a" and "lxc.cap.drop:" to the .conf file of lxc
 10) docker network ls  
 11) docker ps 
