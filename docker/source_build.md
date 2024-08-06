@@ -1,6 +1,7 @@
 ***Docker + Permissions + Lxc***
 
 ### performed in su environment
+### https://download.docker.com/linux/ **GPG Keys for different distro**
 
 ```sh
 0) apt-get update && apt-get upgrade -y **good habit on new builds** 
