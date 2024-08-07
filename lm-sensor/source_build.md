@@ -1,7 +1,7 @@
 ***Lm-sensors Compile + Path + pkgs/dependencies***
 
 ```sh 
-1) apt install git build-essential libtool autotools-dev autoconf automake lm-sensors bison flex -y **Debian distros**
+1) apt install git build-essential libtool autotools-dev autoconf automake lm-sensors bison flex libc-bin -y **Debian distros**
 2) dnf install git gcc make libtool autoconf automake lm_sensors -y **RHEL distros**
 3) dnf groupinstall "Development Tools" -y **comprehensive but more for development**
 4) git clone https://github.com/lm-sensors/lm-sensors.git **repo** 
