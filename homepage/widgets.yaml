@@ -1,0 +1,24 @@
+# System resources
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+    cputemp: true
+    tempmin: 0 
+    tempmax: 100 
+    uptime: true
+    units: metric # change from imperial to metric for Celsius
+    refresh: 3000 # optional, in ms
+    diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
+# Storage resources
+- resources:
+    label: Storage
+    disk: 
+      - /
+      - /mnt/p2p-nfs
+      - /mnt/iscsi
+      - /mnt/nfs-lvm
+# Search resources
+- search:
+    provider: duckduckgo
+    target: _blank
