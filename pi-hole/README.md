@@ -31,7 +31,7 @@ Regularly update and customize your block lists to improve ad blocking effective
 
 ## Standard Pi-hole Process:
 
-  - ***client asks Pi-hole Who is pi-hole.net***
+  - ***Client asks Pi-hole Who is pi-hole.net***
   - ***Pi-hole check its cache and reply if the answer is already known.***
   - ***Pi-hole checks the blocking lists and reply if the domain is blocked.***
   - ***If it can't Pi-hole forwards the request to external upstream DNS server.***
