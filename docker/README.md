@@ -2,9 +2,9 @@
 
 **Docker is an open-source platform designed to automate the deployment, scaling, and management of applications in containers.** Containers are lightweight, portable, and self-sufficient units that include everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings.
 
-**Docker was originally developed by **Solomon Hykes as an internal project within dotCloud and released to the public in March 2013 and is licensed under the Apache License Version 2.0.** It has since evolved and become the cornerstone of many modern DevOps and continuous integration/continuous deployment (`CI/CD`) processes.rce 
+**Docker was originally developed by **Solomon Hykes as an internal project within dotCloud and released to the public in March 2013 and is licensed under the Apache License Version 2.0.** It has since evolved and become the cornerstone of many modern `DevOps` and continuous integration/continuous deployment (`CI/CD`) processes.rce 
 
-**Docker is open-source however, for commercial use of Docker Engine obtained via Docker Desktop within larger enterprises (`exceeding 250 employees OR with annual revenue surpassing $10 million USD`), a paid subscription is required.** The CLI uses Docker APIs to control or interact with the Docker daemon through scripting or direct CLI commands. Many other Docker applications use the underlying API and CLI. The daemon creates and manages Docker objects, such as images, containers, networks, and volumes.
+**Docker is open-source however, for commercial use of Docker Engine obtained via Docker Desktop within larger enterprises (`exceeding 250 employees OR with annual revenue surpassing $10 million USD`), a paid subscription is required.** The `CLI` uses Docker APIs to control or interact with the Docker daemon through scripting or direct commands. Many other Docker applications use the underlying `API` and `CLI`. The daemon creates and manages Docker objects, such as images, containers, networks, and volumes.
 
  > By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
 
