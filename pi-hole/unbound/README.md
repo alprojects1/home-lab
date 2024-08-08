@@ -15,4 +15,16 @@
 
   ■ ***Drawback:*** Traversing the path may be slow, especially for the first time you visit a website - while the bigger DNS providers always have answers for commonly used domains in their cache, you will have to traverse the path if you visit a page for the first time. The first request to a formerly unknown TLD may take up to a second (or even more if you're also using DNSSEC). Subsequent requests to domains under the same TLD usually complete in < 0.1s. Fortunately, both your Pi-hole as well as your recursive server will be configured for efficient caching to minimize the number of queries that will actually have to be performed.
 
+- Pihole & Unbound Process
 
+   - Your client asks the Pi-hole Who is pi-hole.net?
+   - Your Pi-hole will check its cache and reply if the answer is already known.
+   - Your Pi-hole will check the blocking lists and reply if the domain is blocked.
+   - Since neither 2. nor 3. is true in our example, the Pi-hole delegates the request to the (local) recursive DNS resolver.
+   - Your recursive server will send a query to the DNS root servers: "Who is handling .net?"
+   - The root server answers with a referral to the TLD servers for .net.
+   - Your recursive server will send a query to one of the TLD DNS servers for .net: "Who is handling pi-hole.net?"
+   - The TLD server answers with a referral to the authoritative name servers for pi-hole.net.
+   - Your recursive server will send a query to the authoritative name servers: "What is the IP of pi-hole.net?"
+   - The authoritative server will answer with the IP address of the domain pi-hole.net.
+   - Your recursive server will send the reply to your Pi-hole which will, in turn, reply to your client and tell it the answer to its request.
