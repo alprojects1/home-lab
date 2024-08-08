@@ -10,7 +10,7 @@
 3) configure to your needs **mine was more focused on priacy**
 4) pihole -a -p **will get prompted to change password**
 6) apt install unbound
-7) nano /etc/unbound/unbound.conf.d/pi-hole.conf ** conf in folder**
+7) nano /etc/unbound/unbound.conf.d/pi-hole.conf **unbound_config.md**
 8) service unbound restart
 9) dig pi-hole.net @127.0.0.1 -p 5335
 10) dig dnssec.works @127.0.0.1 -p 5335 **authority flag should be 1**
