@@ -10,9 +10,9 @@ Pi-hole is highly configurable and **supports custom block and allow lists. It c
 
 ## Key Features:
 
-  - ***Network-wide Ad Blocking:*** Pi-hole blocks ads for all devices on the network by acting as a DNS server. This includes ads on websites, as well as in apps and on smart TVs.
+  - ***Network-wide Ad Blocking:*** Pi-hole blocks ads for all devices on the network by acting as a `DNS` server. This includes ads on websites, as well as in apps and on smart `TVs`.
   - ***Custom Block/Allow Lists:*** Users can configure their own lists of domains to block or allow, providing fine-grained control over content.
-  - ***Web Interface: Pi-hole includes*** a web-based interface for monitoring DNS queries, configuring settings, and viewing statistics.
+  - ***Web Interface: Pi-hole includes*** a web-based interface for monitoring `DNS` queries, configuring settings, and viewing statistics.
   - ***Low Resource Usage:*** Designed to run on low-power devices like the Raspberry Pi, Pi-hole is efficient and requires minimal resources.
   - ***Privacy Protection:*** By blocking trackers and ad domains, Pi-hole enhances user privacy by preventing data collection from various sources.
  
