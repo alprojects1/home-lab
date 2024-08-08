@@ -1,4 +1,4 @@
-### Homebrew Wiki:
+## Homebrew Wiki:
 
 **Homebrew is a free and open-source software package management system that simplifies the installation of software on Apple's macOS and Linux operating systems.** The name is intended to suggest the idea of building software on your own, in a similar way to brewing your own beer.
 
@@ -22,3 +22,6 @@
 - ***Secure Your Installation*** - Use Homebrew’s security features, like verifying GPG signatures of packages.
 - ***Automate with Scripts*** - Automate routine tasks and environment setups using shell scripts to maintain consistency across systems.
 - ***Document Custom Installations*** - Keep a record of custom and manual installations to streamline system recovery or replication.
+
+##
+  > Homebrew, the popular package manager for macOS and Linux, was inspired by a visit to the Google campus. Max Howell, the creator of Homebrew, was impressed by the ease with which Google engineers could install software on their systems. Determined to bring this level of simplicity to the broader macOS community, Howell developed Homebrew, which allows users to install, update, and manage software directly from the command line. Homebrew's name and logo reflect the idea of crafting software solutions in a straightforward, DIY manner, much like brewing your own beer at home.
