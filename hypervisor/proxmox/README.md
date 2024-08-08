@@ -6,7 +6,7 @@
 
 **To put it simply, ESXi and Proxmox have distinct approaches to virtualization that cater to different requirements. ESXi is a solution designed for large and complex deployments in an enterprise setting.** Meanwhile, Proxmox is an open-source alternative that suits smaller workloads but can also be configurated for enterprise use. When determining which virtualization platform is right for your needs, it’s important to consider the system requirements for ESXi and Proxmox. Both platforms have minimum hardware requirements to function properly, but ESXi typically demands more robust hardware.
 
-## ESXi vs Proxmox: System Requirements
+## ESXi vs Proxmox: System Requirements:
 
   - ***Esxi Requirements*** 
 
@@ -26,7 +26,7 @@
 
      - Proxmox can run on both server and desktop hardware, providing more flexibility.
 
-## Key Differences Between ESXi and Proxmox 
+## Key Differences Between ESXi and Proxmox: 
 
    - ***Cost and Licensing*** 
       - ESXi is a commercial solution developed by VMware that requires paid licensing for enterprise features and support. Licensing fees for ESXi can be quite significant, especially for large deployments. 
