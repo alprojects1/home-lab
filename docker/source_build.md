@@ -24,6 +24,3 @@
 ```sh
 1) sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-ce-rootless-extras
 ```
-
-```sh
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian bookworm stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
