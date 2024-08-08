@@ -19,9 +19,9 @@ Installing `RSAT` tools to manage the DC and AD services frontend, it's worth me
 
 - ***File and Print Services*** - Samba provides seamless file and print services for clients across various operating systems, including Windows, Linux, and macOS.
 - ***Active Directory Domain Controller*** - Capable of acting as an AD Domain Controller, enabling Linux servers to manage AD-based networks with authentication, directory services, and group policy management.
-- ***Interoperability: Ensures compatibility between Unix/Linux and Windows systems, allowing them to share files and printers effortlessly.
-- ***Security*** Supports advanced security features like Kerberos, NTLM, and integration with existing security infrastructures.
-- ***Flexibility*** Can be configured for different roles, including standalone server, member server in a domain, or as a domain controller.
+- ***Interoperability*** - Ensures compatibility between Unix/Linux and Windows systems, allowing them to share files and printers effortlessly.
+- ***Security*** - Supports advanced security features like Kerberos, NTLM, and integration with existing security infrastructures.
+- ***Flexibility***-  Can be configured for different roles, including standalone server, member server in a domain, or as a domain controller.
 
 
 ## Source Best Practice:
