@@ -4,7 +4,17 @@
 
 **Everything stored inside the `AD` is replicated between `DCs`. For example: users, groups, and DNS records. In the current state, Samba does not support the distributed file system replication (`DFS-R`) protocol used for Sysvol replication.** its often viewed as a subfunction of DFS, and both are often used together, but they can also be used completely separately: DFS with multiple targets can be used without DFS-R (`if the folder contents are updated with some other method`), and DFS-R can replicate shared folders that are not DFS-targets.
 
-**TDB files and LDB files using TDB have a maximum size of 4 GB because the databases use 32-bit structures. Previously, there was a project called NTDB that should address the size limit and other problems. However, the project has been stopped because of problems migrating the databases.** LDB files based on LMDB, specifically the sam.ldb on the AD DC, have a size specified by the --backend-store-size=SIZE parameter to samba-tool domain provision and samba-tool domain join which controls the maximum DB size. The default is 8GB. As LMDB is a true 64-bit database, the maximum is limited only by the storage available on the system.
+**Everything stored inside the AD is replicated between DCs. For example: users, groups, and DNS records. In the current state, Samba does not support the distributed file system replication (`DFS-R`) protocol used for Sysvol replication.** You can't use another distributed filesystem like `GlusterFS` or `Lustre` for `SysVol` Replication because a cluster file system with Samba requires `CTDB` to be able to do it safely. And `CTDB` and AD DC are incompatible.
+
+
+
+## Key Features:
+
+- ***Data Synchronization*** -  DFS-R (Distributed File System Replication) allows for efficient data replication between Samba servers, ensuring consistency across multiple servers.
+- ***Resilience and Redundancy*** - Provides fault tolerance by replicating data across different servers, enhancing data availability and reliability.
+- ***Bandwidth Optimization*** - Uses remote differential compression to minimize the amount of data sent over the network during replication, optimizing bandwidth usage.
+- ***Automatic Recovery*** Capable of automatic recovery from interruptions, ensuring data integrity and continuity.
+
 
 ## Best Practice:
 
@@ -18,4 +28,4 @@
 
 
 ##
- > Everything stored inside the AD is replicated between DCs. For example: users, groups, and DNS records. In the current state, Samba does not support the distributed file system replication (`DFS-R`) protocol used for Sysvol replication. You can't use another distributed filesystem like GlusterFS or Lustre for SysVol Replication because a cluster file system with Samba requires CTDB to be able to do it safely. And CTDB and AD DC are incompatible.
+ > `TDB` files and `LDB` files using TDB have a maximum size of 4 GB because the databases use 32-bit structures. Previously, there was a project called NTDB that should address the size limit and other problems. However, the project has been stopped because of problems migrating the databases. `LDB` files based on LMDB, specifically the sam.ldb on the AD DC, have a size specified by the --backend-store-size=SIZE parameter to samba-tool domain provision and samba-tool domain join which controls the maximum DB size. The default is 8GB. As LMDB is a true 64-bit database, the maximum is limited only by the storage available on the system.
