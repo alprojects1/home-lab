@@ -28,4 +28,13 @@ Enable query logging to monitor DNS requests and configure the appropriate priva
   - ***Implement Custom Block and Allow Lists***
 Regularly update and customize your block lists to improve ad blocking effectiveness. Maintain a whitelist for domains that should always be allowed.
 
+### standard Pi-hole Process
+
+  - Your client asks the Pi-hole Who is pi-hole.net?
+  - Your Pi-hole will check its cache and reply if the answer is already known.
+  - Your Pi-hole will check the blocking lists and reply if the domain is blocked.
+  - Since neither 2. nor 3. is true in our example, the Pi-hole forwards the request to the configured external upstream DNS server(s).
+  - Upon receiving the answer, your Pi-hole will reply to your client and tell it the answer to its request.
+  - Lastly, your Pi-hole will save the answer in its cache to be able to respond faster if any of your clients queries the same domain again.
+
 > Pi-hole is widely used in home networks to block ads and protect privacy across all devices. It is also employed in small to medium office environments to reduce bandwidth usage and improve browsing speeds by blocking unwanted content at the network level.
