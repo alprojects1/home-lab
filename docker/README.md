@@ -1,3 +1,4 @@
+##
 ### Docker Wiki:
 
 **Docker is an open-source platform designed to automate the deployment, scaling, and management of applications in containers.** Containers are lightweight, portable, and self-sufficient units that include everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings.
@@ -26,5 +27,5 @@ Docker was originally developed by **Solomon Hykes as an internal project within
     - ***Avoid Running as Root*** - Configure containers to run as non-root users. Running as root inside a container can pose significant security risks if the container is compromised.
     - ***Regularly Update Images and Dependencies*** - Ensure that base images and dependencies are regularly updated to include the latest security patches and improvements. This helps in mitigating potential vulnerabilities.
     - ***Use Volumes for Persistent Storage*** - Use Docker volumes for persistent storage to ensure data is not lost when containers are stopped or removed. Volumes also make it easier to manage and back up data.
-
+##
  > By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
