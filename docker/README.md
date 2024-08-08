@@ -6,8 +6,6 @@ Docker was originally developed by **Solomon Hykes as an internal project within
 
 **Docker is open-source however, for commercial use of Docker Engine obtained via Docker Desktop within larger enterprises (`exceeding 250 employees OR with annual revenue surpassing $10 million USD`), a paid subscription is required.** The `CLI` uses Docker APIs to control or interact with the Docker daemon through scripting or direct commands. Many other Docker applications use the underlying `API` and `CLI`. The daemon creates and manages Docker objects, such as images, containers, networks, and volumes.
 
- > By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
-
  ## Security & Compliance Requirements:
 
 - Ensuring the security of Docker containers involves multiple layers, including the host operating system, Docker daemon configuration, and container configurations. Some key practices are:
@@ -29,3 +27,4 @@ Docker was originally developed by **Solomon Hykes as an internal project within
     - ***Regularly Update Images and Dependencies*** - Ensure that base images and dependencies are regularly updated to include the latest security patches and improvements. This helps in mitigating potential vulnerabilities.
     - ***Use Volumes for Persistent Storage*** - Use Docker volumes for persistent storage to ensure data is not lost when containers are stopped or removed. Volumes also make it easier to manage and back up data.
 
+ > By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
