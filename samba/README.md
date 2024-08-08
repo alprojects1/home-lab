@@ -4,7 +4,7 @@ Starting from version 4.0 (`released in 2012`), Samba is able to serve as an Act
 
 While `NIST 800-171` is designed specifically for non-Federal (`commercial`) enterprises, with a separate set of guidelines – `NIST 800-57` – developed to cover Federal systems and organizations, `ISO 27001` is a more general standard and can be applicable to organizations of all types.
 
-Installing RSAT tools to manage the DC and AD services frontend, it's worth mentioning DHCP won't connect to RSAT tools. **RSAT is designed primarily for managing Windows services.** While it can interact with some non-Windows services that use protocols compatible with Windows (like Samba for Active Directory), it generally does not support managing non-Windows implementations of DHCP directly. This is because the DHCP service in Linux (commonly ISC DHCP Server) does not communicate with the same management protocols as the Windows DHCP service.
+Installing `RSAT` tools to manage the DC and AD services frontend, it's worth mentioning `DHCP` won't connect to RSAT tools. **RSAT is designed primarily for managing Windows services.** While it can interact with some non-Windows services that use protocols compatible with Windows (like Samba for Active Directory), it generally does not support managing non-Windows implementations of DHCP directly. This is because the DHCP service in Linux (`commonly ISC DHCP Server`) does not communicate with the same management protocols as the Windows DHCP service.
 
 ## Security & Compliance Requirements:
 
