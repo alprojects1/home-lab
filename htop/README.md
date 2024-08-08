@@ -1,5 +1,4 @@
-##
-### Htop Wiki:
+## Htop Wiki:
 
 **Htop (`short for Hisham's top`) is an interactive process viewer for Unix Based Systems, developed as a more user-friendly alternative to the top command under the GNU General Public License (`GPL`).** It provides a real-time, text-mode interface, with a comprehensive overview of system processes in a tabular format, which includes columns for process ID (`PID`), user, priority, nice value, virtual memory size, resident set size, shared memory size, state, CPU percentage, memory percentage, time, and command.  
 
