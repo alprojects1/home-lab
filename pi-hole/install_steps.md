@@ -14,6 +14,8 @@
 8) service unbound restart
 9) dig pi-hole.net @127.0.0.1 -p 5335
 10) dig dnssec.works @127.0.0.1 -p 5335 **authority flag should be 1**
-11) 5) enter ip into broswer >> gui >> adlist >> used the 2 most resoable filters from firebog.net
-12) while in gui >> settings >> dns >> Upstream DNS Servers **check Custom 1 (IPv4)**
-13) entered 127.0.0.1#5335 into empty box
+11) enter ip into broswer >> gui >> adlist >> used the 2 most resoable filters from firebog.net from each section
+12) while in gui >> settings >> dns >> in the "Upstream DNS Servers" **check Custom 1 (IPv4)**
+13) entered 127.0.0.1#5335 into empty box1
+14) below that section you will see "Potentially dangerous options" >> bind it to your nic >> in my case "Respond only on interface eth0"
+15) Save >> you now have a recursive DNS server
