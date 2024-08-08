@@ -13,7 +13,7 @@
 - ***Data Synchronization*** -  DFS-R (Distributed File System Replication) allows for efficient data replication between Samba servers, ensuring consistency across multiple servers.
 - ***Resilience and Redundancy*** - Provides fault tolerance by replicating data across different servers, enhancing data availability and reliability.
 - ***Bandwidth Optimization*** - Uses remote differential compression to minimize the amount of data sent over the network during replication, optimizing bandwidth usage.
-- ***Automatic Recovery*** Capable of automatic recovery from interruptions, ensuring data integrity and continuity.
+- ***Automatic Recovery*** - Capable of automatic recovery from interruptions, ensuring data integrity and continuity.
 
 
 ## Best Practice:
