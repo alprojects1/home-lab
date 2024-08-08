@@ -1,4 +1,4 @@
-## UNBOUND
+## Unbound Wiki
 
 **Pi-hole includes a caching and forwarding `DNS` server, now known as `FTLDNS`.** After applying the blocking lists, it forwards requests made by the clients to configured upstream DNS server. However, as has been mentioned by **several users in the past, this leads to some privacy concerns as it ultimately raises the question: Whom can you trust?** Recently, more and more small (`and not so small`) DNS upstream providers have appeared on the market, advertising free and private DNS service, but how can you know that they keep their promises? Right, you can't.
 
@@ -16,14 +16,14 @@
 
 ## Pihole & Unbound Process
 
-- Your client asks the Pi-hole Who is pi-hole.net?
-- Your Pi-hole will check its cache and reply if the answer is already known.
-- Your Pi-hole will check the blocking lists and reply if the domain is blocked.
-- Since neither 2. nor 3. is true in our example, the Pi-hole delegates the request to the (local) recursive DNS resolver.
-- Your recursive server will send a query to the DNS root servers: "Who is handling .net?"
-- The root server answers with a referral to the TLD servers for .net.
-- Your recursive server will send a query to one of the TLD DNS servers for .net: "Who is handling pi-hole.net?"
-- The TLD server answers with a referral to the authoritative name servers for pi-hole.net.
-- Your recursive server will send a query to the authoritative name servers: "What is the IP of pi-hole.net?"
-- The authoritative server will answer with the IP address of the domain pi-hole.net.
-- Your recursive server will send the reply to your Pi-hole which will, in turn, reply to your client and tell it the answer to its request.
+- ***lient asks the Pi-hole Who is pi-hole.net***
+- ***Pi-hole checks its cache and reply if the answer is already known.***
+- ***Pi-hole Checks the blocking lists and reply if the domain is blocked.***
+- ***If it can't Pi-hole it delegates the request to the (local) recursive DNS resolver.***
+- ***Recursive server will send a query to the DNS root servers: "Who is handling .net?"***
+- ***Root server answers with a referral to the TLD servers for .net.***
+- ***Recursive server will send a query to one of the TLD DNS servers for .net: "Who is handling pi-hole.net?"***
+- ***TLD server answers with a referral to the authoritative name servers for pi-hole.net.***
+- ***Recursive server will send a query to the authoritative name servers: "What is the IP of pi-hole.net?"***
+- ***The authoritative server will answer with the IP address of the domain pi-hole.net.***
+- ***Recursive server will send the reply to your Pi-hole which will, in turn, reply to your client and tell it the answer to its request.***
