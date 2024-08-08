@@ -1,6 +1,4 @@
-##
-### Docker Wiki:
-
+## Docker Wiki:
 **Docker is an open-source platform designed to automate the deployment, scaling, and management of applications in containers.** Containers are lightweight, portable, and self-sufficient units that include everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings.
 
 Docker was originally developed by **Solomon Hykes as an internal project within dotCloud and released to the public in March 2013 and is licensed under the Apache License Version 2.0.** It has since evolved and become the cornerstone of many modern `DevOps` and continuous integration/continuous deployment (`CI/CD`) processes.rce 
