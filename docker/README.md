@@ -1,4 +1,4 @@
-### Docker
+### Docker Wiki:
 
 **Docker is an open-source platform designed to automate the deployment, scaling, and management of applications in containers.** Containers are lightweight, portable, and self-sufficient units that include everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings.
 
@@ -8,7 +8,7 @@
 
  > By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
 
-### Security & Compliance Requirements:
+ ## Security & Compliance Requirements:
 
 - Ensuring the security of Docker containers involves multiple layers, including the host operating system, Docker daemon configuration, and container configurations. Some key practices are:
   
@@ -18,6 +18,7 @@
     - ***Immutable Containers & Regular Audits*** Build containers to be immutable by minimizing the use of writable layers. This ensures that containers are not modified at runtime, also conduct regular security audits of Docker configurations and containers. Use tools like Docker Bench for Security to check for compliance with best practices.
     - ***Network Security*** Use Docker's network features to create isolated networks for containers. Configure firewalls and network policies to control traffic between containers and external systems.
     - ***Compliance*** Ensure that Docker configurations and practices comply with relevant regulatory requirements (`GDPR, HIPAA, SOC2`) by implementing appropriate security controls and maintaining thorough documentation and audit trails.
+ ##
 
 ### Best Practices:
 
@@ -28,3 +29,4 @@
     - ***Avoid Running as Root*** Configure containers to run as non-root users. Running as root inside a container can pose significant security risks if the container is compromised.
     - ***Regularly Update Images and Dependencies*** Ensure that base images and dependencies are regularly updated to include the latest security patches and improvements. This helps in mitigating potential vulnerabilities.
     - ***Use Volumes for Persistent Storage*** Use Docker volumes for persistent storage to ensure data is not lost when containers are stopped or removed. Volumes also make it easier to manage and back up data.
+##
