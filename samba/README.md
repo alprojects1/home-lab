@@ -14,6 +14,16 @@ Installing RSAT tools to manage the DC and AD services frontend, it's worth ment
 
 - Do not create a symbolic link to the generated krb5.conf file. In Samba 4.7 and later, the `/usr/local/samba/private/` directory is no longer accessible by other users than the root user. If the file is a symbolic link, other users are not able to read the file and, for example, dynamic DNS updates fail if you use the `BIND_DLZ` DNS back end. Make sure that you provision the AD using a DNS domain that will not need to be changed. Samba does not support renaming the AD DNS zone and Kerberos realm. Do not use `.local` for the TLD, this is used by `Avahi`.
 
+
+## Key Features:
+
+- ***File and Print Services*** - Samba provides seamless file and print services for clients across various operating systems, including Windows, Linux, and macOS.
+- ***Active Directory Domain Controller*** - Capable of acting as an AD Domain Controller, enabling Linux servers to manage AD-based networks with authentication, directory services, and group policy management.
+- ***Interoperability: Ensures compatibility between Unix/Linux and Windows systems, allowing them to share files and printers effortlessly.
+- ***Security*** Supports advanced security features like Kerberos, NTLM, and integration with existing security infrastructures.
+- ***Flexibility*** Can be configured for different roles, including standalone server, member server in a domain, or as a domain controller.
+
+
 ## Source Best Practice:
 
 - When you extract source files directly to the root directory (`/`), it can lead to files being scattered across the system if the archive does not contain a top-level directory. This can make cleanup and management more difficult. Typically, it's better to extract source archives into a dedicated directory to keep your system organized and to avoid any unintended overwriting of system files or directories. A common practice is to use a directory like `/usr/src` or `/opt` for compiling software from source. This approach has several benefits:
