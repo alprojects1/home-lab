@@ -8,7 +8,7 @@
   
    - ***Failure Scenarios*** - If one node fails, the remaining two nodes can still serve data, but the cluster will be in a degraded state. If another node fails before the first one is repaired and brought back online, you could potentially lose data. Performance may be impacted in a three-node setup due to the high level of replication and the limited number of nodes to handle the workload.
      
-## HA Storage Solution (Two Nodes) 
+## HA Storage Solution: (Two Nodes) 
 
  - To achieve a high-availability (`HA`) storage solution with a two-node setup, we propose creating a custom storage architecture leveraging JBOD configurations with `SSDs` and `NFS/ISCSI` connections. This setup aims to deliver solid performance and reliability while maintaining high availability. 
 
