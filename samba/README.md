@@ -22,3 +22,6 @@ Installing RSAT tools to manage the DC and AD services frontend, it's worth ment
   - It avoids cluttering the root directory or accidentally overwriting important system files.
   - It makes it easier to delete or archive the source directory once you're done.
   - This method provides a clean and reversible way to manage software compiled from source, which is especially helpful in environments where you might be compiling different versions or multiple software packages.
+
+##
+> Samba, an open-source software suite, has a unique history tied to its name. "Samba" was chosen because it contains the letters "S", "M", and "B" from the SMB (Server Message Block) protocol, which is fundamental to its function. 
