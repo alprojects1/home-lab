@@ -1,4 +1,4 @@
-### Docker DHCP and Network Modes
+## Docker DHCP & Network Modes:
 
 Docker runs in a **separate network by default called a docker bridge network, making DHCP serve addresses to that network instead of your LAN.** This guide explains why Docker Pi-hole DHCP differs from normal Pi-hole and how to address this issue.
 
