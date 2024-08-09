@@ -1,0 +1,72 @@
+---
+- Media:
+    - Plex:
+        icon: plex.png
+        href: https://0.0.0.0:32400/web
+        description: Media streaming
+        widget:
+          type: plex
+          url: https://0.0.0.0:32400
+          key: 
+
+    - Sonarr:
+        icon: sonarr.png
+        href: http://sonarr.host/
+        description: Series management
+        widget:
+          type: sonarr
+          url: http://sonarr.host
+          key: apikeyapikeyapikeyapikeyapikey
+
+    - Radarr:
+        icon: radarr.png
+        href: http://radarr.host/
+        description: Movie management
+        widget:
+          type: radarr
+          url: http://radarr.host
+          key: apikeyapikeyapikeyapikeyapikey
+
+- Host:
+    - Proxmox:
+        icon: proxmox.png
+        href: https://0.0.0.0:8006/
+        description: Host Management
+        widget:
+          type: proxmox
+          url: https://0.0.0.0:8006
+          node: pve1
+          username: api@pam!homepage
+          token: 08f7965f-6d60-42b8-9db0-8ecc9907cc58
+
+    - Proxmox2:
+        icon: proxmox.png
+        href: https://0.0.0.0:8006/
+        description: Host Management
+        widget:
+          type: proxmox
+          url: https://0.0.0.0:8006
+          node: pve2
+          username: 
+          token: 
+
+    - QNAP:
+        icon: qnap.png
+        href: https://0.0.0.0:1148/cgi-bin/
+        description: Host Management
+        widget:
+          type: qnap
+          url: https://0.0.0.0:1148/cgi-bin/
+          username: 
+          password: 
+
+- Services:
+    - Pi-hole:
+        icon: pihole.png
+        href: https://0.0.0.0/admin/
+        description: Network-wide ad blocker
+        widget:
+          type: pihole
+          url: https://0.0.0.0/admin/
+          version: 6
+          key: 
