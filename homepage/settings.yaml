@@ -16,7 +16,7 @@
         widget:
           type: sonarr
           url: http://sonarr.host
-          key: apikeyapikeyapikeyapikeyapikey
+          key: 
 
     - Radarr:
         icon: radarr.png
@@ -25,7 +25,7 @@
         widget:
           type: radarr
           url: http://radarr.host
-          key: apikeyapikeyapikeyapikeyapikey
+          key: 
 
 - Host:
     - Proxmox:
