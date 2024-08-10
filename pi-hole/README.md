@@ -6,7 +6,7 @@
 
 ** It functions by intercepting DNS requests and checking them against a list of known advertising and tracking domains. If a match is found, Pi-hole blocks the request, preventing ads from being downloaded.** This approach differs from traditional ad blockers, which typically run as browser extensions and only hide ads after they have been downloaded.
 
-Pi-hole is highly configurable and **supports custom block and allow lists. It can be installed on various platforms, including Raspberry Pi,** which makes it a popular choice for home networks. The software uses a modified version of dnsmasq called `FTLDNS` to handle DNS queries and blocking. **It can act as a forwarding DNS (by defeult) or configured to act as a recursive** 
+Pi-hole is highly configurable and **supports custom block and allow lists. It can be installed on various platforms, including Raspberry Pi,** which makes it a popular choice for home networks. The software uses a modified version of dnsmasq called `FTLDNS` to handle DNS queries and blocking. **It can act as a forwarding DNS (`by defeult`) or configured to act as a recursive** 
 
 ## Key Features:
 
