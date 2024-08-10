@@ -37,7 +37,7 @@
           url: https://0.0.0.0:8006
           node: pve1
           username: api@pam!homepage
-          token: 08f7965f-6d60-42b8-9db0-8ecc9907cc58
+          token: 
 
     - Proxmox2:
         icon: proxmox.png
