@@ -21,4 +21,5 @@ The project is hosted on GitHub, where users can find the source code, documenta
   - ***Customization:*** High level of customization to match personal preferences.
   - ***Open Source:*** Free to use and modify, with active community support.
  
+ ##
 >The project is hosted on GitHub, where users can find the source code, documentation, and installation instructions. The community actively contributes to the project by reporting issues, requesting features, and submitting pull requests.
