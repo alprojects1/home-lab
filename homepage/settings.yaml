@@ -1,72 +1,27 @@
 ---
-- Media:
-    - Plex:
-        icon: plex.png
-        href: https://0.0.0.0:32400/web
-        description: Media streaming
-        widget:
-          type: plex
-          url: https://0.0.0.0:32400
-          key: 
+title: alprojects_dashboard
+theme: dark
+color: slate
+hideVersion: true
 
-    - Sonarr:
-        icon: sonarr.png
-        href: http://sonarr.host/
-        description: Series management
-        widget:
-          type: sonarr
-          url: http://sonarr.host
-          key: 
+layout:
+  Media:
+    style: row
+    columns: 3
+  Host:
+    style: row
+    columns: 3
+  Services:
+    style: row
+    columns: 4
 
-    - Radarr:
-        icon: radarr.png
-        href: http://radarr.host/
-        description: Movie management
-        widget:
-          type: radarr
-          url: http://radarr.host
-          key: 
+background:
+  image: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2560&q=80
+  blur: sm # Options: sm, "", md, xl... 
+  saturate: 50 # Options: 0, 50, 100
+  brightness: 75 # Options: 0, 50, 75
+  opacity: 75 # Range: 0-100
 
-- Host:
-    - Proxmox:
-        icon: proxmox.png
-        href: https://0.0.0.0:8006/
-        description: Host Management
-        widget:
-          type: proxmox
-          url: https://0.0.0.0:8006
-          node: pve1
-          username: api@pam!homepage
-          token: 
-
-    - Proxmox2:
-        icon: proxmox.png
-        href: https://0.0.0.0:8006/
-        description: Host Management
-        widget:
-          type: proxmox
-          url: https://0.0.0.0:8006
-          node: pve2
-          username: 
-          token: 
-
-    - QNAP:
-        icon: qnap.png
-        href: https://0.0.0.0:1148/cgi-bin/
-        description: Host Management
-        widget:
-          type: qnap
-          url: https://0.0.0.0:1148/cgi-bin/
-          username: 
-          password: 
-
-- Services:
-    - Pi-hole:
-        icon: pihole.png
-        href: https://0.0.0.0/admin/
-        description: Network-wide ad blocker
-        widget:
-          type: pihole
-          url: https://0.0.0.0/admin/
-          version: 6
-          key: 
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
