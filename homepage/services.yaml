@@ -1,38 +1,38 @@
 ---
-- Media:
+- Content & Media:
     - Plex:
-        icon: mdi-plex #plex.png
+        icon: mdi-plex #si-plex #plex.png
         href: "{{HOMEPAGE_VAR_PLEX_HREF}}"
-        description: Media streaming
+        description: Media Transcoder
         ping: "{{HOMEPAGE_VAR_PLEX_PING}}"
         widget:
           type: plex
           url: "{{HOMEPAGE_VAR_PLEX_URL}}"
           key: "{{HOMEPAGE_VAR_PLEX_API_KEY}}"
 
-#    - Sonarr:
-#        icon: sonarr.png
-#        href: http://sonarr.host/
-#        description: Series management
-#        widget:
-#          type: sonarr
-#          url: http://sonarr.host
-#          key: apikeyapikeyapikeyapikeyapikey
+    - Sonarr:
+        icon: si-sonarr #sonarr.png
+        href: "{{HOMEPAGE_VAR_SONARR_HREF}}"
+        description: Series Organization
+        widget:
+          type: sonarr
+          url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+          key:
 
-#   - Radarr:
-#        icon: radarr.png
-#        href: http://radarr.host/
-#        description: Movie management
-#        widget:
-#          type: radarr
-#          url: http://radarr.host
-#          key: apikeyapikeyapikeyapikeyapikey
+    - Radarr:
+        icon: si-radarr #mdi-radar #radarr.png
+        href: "{{HOMEPAGE_VAR_RADARR_HREF}}"
+        description: Movie Organization
+        widget:
+          type: radarr
+          url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+          key:
 
-- Host:
+- Infrastructure & Data:
     - Proxmox:
-        icon: mdi-server #proxmox.png  
+        icon: si-proxmox #mdi-server #proxmox.png  
         href: "{{HOMEPAGE_VAR_PROXMOX_HREF}}"
-        description: NODE-1
+        description: Hypervisor 1
         ping: "{{HOMEPAGE_VAR_PROXMOX_PING}}"
         widget:
           type: proxmox
@@ -42,9 +42,9 @@
           token: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
 
     - Proxmox2:
-        icon: mdi-server #proxmox.png
+        icon: si-proxmox #mdi-server #proxmox.png
         href: "{{HOMEPAGE_VAR_PROXMOX_HREF_2}}"
-        description: NODE-2
+        description: Hypervisor 2
         ping: "{{HOMEPAGE_VAR_PROXMOX_PING_2}}"
         widget:
           type: proxmox
@@ -54,9 +54,9 @@
           token: "{{HOMEPAGE_VAR_PROXMOX_API_KEY2}}"
 
     - QNAP:
-        icon: mdi-nas #qnap.png
+        icon: mdi-nas #si-qnap #qnap.png
         href: "{{HOMEPAGE_VAR_QNAP_HREF}}"
-        description: SAN/NAS
+        description: Storage Network Area
         ping: "{{HOMEPAGE_VAR_QNAP_PING}}"
         widget:
           type: qnap
@@ -64,11 +64,11 @@
           username: "{{HOMEPAGE_VAR_QNAP_USER}}"
           password: "{{HOMEPAGE_VAR_QNAP_PWD}}"
 
-- Services:
+- Service & Host:
     - Pi-hole:
-        icon: mdi-pi-hole #pi-hole.png
+        icon: si-pi-hole #mdi-pi-hole #pi-hole.png
         href: "{{HOMEPAGE_VAR_PIHOLE_HREF}}"
-        description: RCS-DNS
+        description: Recursive Domain
         ping: "{{HOMEPAGE_VAR_PIHOLE_PING}}"
         widget:
           type: pihole
@@ -76,11 +76,98 @@
           key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
 
     - Pi-hole2:
-        icon: mdi-pi-hole #pi-hole.png
+        icon: si-pi-hole #mdi-pi-hole #pi-hole.png
         href: "{{HOMEPAGE_VAR_PIHOLE_HREF_2}}"
-        description: RCS-DNS-P
+        description: Forwarding Domain
         ping: "{{HOMEPAGE_VAR_PIHOLE_PING_2}}"
         widget:
           type: pihole
           url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
           key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
+
+    - Twingate:
+        icon: si-openlayers #mdi-key #twingate.png
+        href: "{{HOMEPAGE_VAR_TWINGATE_HREF}}"
+        description: Zero Trust
+        widget:
+          type: "{{HOMEPAGE_VAR_TWINGATE_USER}}"
+          url: "{{HOMEPAGE_VAR_TWINGATE_URL}}"
+          token: "{{HOMEPAGE_VAR_TWINGATE_API_KEY}}"
+
+    - Cloudflare:
+        icon: si-fireship #mdi-cloud #cloudflare.png
+        href: "{{HOMEPAGE_VAR_CLOUDFLARE_HREF}}"
+        description: Hosting Organization
+        widget:
+          type: cloudflare
+          url: "{{HOMEPAGE_VAR_CLOUDFLARE_URL}}"
+          api_key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_KEY}}"
+          email: "{{HOMEPAGE_VAR_CLOUDFLARE_EMAIL}}"
+          zone_id: "{{HOMEPAGE_VAR_CLOUDFLARE_ZONE_ID}}"
+          
+#           accountid: accountid # from zero trust dashboard url e.g. https://one.dash.cloudflare.com/<accountid>/home/quick-start
+#           tunnelid: tunnelid # found in tunnels dashboard under the tunnel name
+#           key: cloudflareapitoken # api token with `Account.Cloudflare Tunnel:Read` https://dash.cloudflare.com/profile/api-tokens
+
+- Identity & security:
+    - Authentik:
+        href: "{{HOMEPAGE_VAR_AUTHENTIK_HREF}}"
+        description: Access Organization
+        icon: si-authentik #authentik.png
+        widget:
+            type: authentik
+            url: "{{HOMEPAGE_VAR_AUTHENTIK_URL}}"
+            key: "{{HOMEPAGE_VAR_AUTHENTIK_API_KEY}}"
+
+    - Bitwarden:
+        href: "{{HOMEPAGE_VAR_HOME_PASSBOLT_HREF}}"
+        description: Password Organization
+        icon: si-bitwarden #passbolt.png
+
+
+- Automation & Iot:
+    - Speed Tracker:
+        icon: si-speedtest #mdi-speedometer
+        href: "{{HOMEPAGE_VAR_TRACKER_HREF}}"
+        description: Speed Tracking
+        ping: "{{HOMEPAGE_VAR_TRACKER_PING}}"
+        container: speedtest
+#        widget:
+#            type: speedtest
+#            url: "{{HOMEPAGE_VAR_TRACKER_URL}}"
+    - Kestra:
+        href: "{{HOMEPAGE_VAR_KESTRA_HREF}}"
+        description: Logcal Path Automation
+        icon: si-testrail ##https://kestra-io.gallerycdn.vsassets.io/extensions/kestra-io/kestra/0.0.1/1692285562923/Microsoft.VisualStudio.Services.Icons.Default
+
+    - Ansible Semaphore:
+        href: "{{HOMEPAGE_VAR_ANSIBLE_HREF}}"
+        description: Lxc & Vm Automation
+        icon: si-ansible #si-ansible-#EE0000
+
+    - Cyber Power:
+        href: "{{HOMEPAGE_VAR_CYBER_POWER_HREF}}"
+        description: Power Orginization
+        icon: mdi-power-plug-battery
+
+    - Brother MFP:
+        href: "{{HOMEPAGE_VAR_BROTHER_PRINTER_HREF}}"
+        description: Printer
+        icon: mdi-printer
+
+    - OpenPrinting Cups:
+        href: "{{HOMEPAGE_VAR_CUPS_HREF}}"
+        description: Printer Orginization
+        icon: mdi-coffee
+
+#   - Home Assistant:
+ #       icon: si-homeassistant
+ #       href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_HREF}}"
+ #       description: Home Automation
+ #       ping: "{{HOMEPAGE_VAR_HOME_ASSISTANT_PING}}"
+ #       container: homeassistant
+ #       widget:
+ #         type: homeassistant
+ #         url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+ #         key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
+
