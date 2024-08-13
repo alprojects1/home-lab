@@ -1,13 +1,19 @@
+---
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
+    env_file:
+      - .env
     container_name: homepage
-    env_file: .env
     ports:
       - 3000:3000
     volumes:
       - /compose/homepage:/app/config
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /compose/homepage:/app/images
+      - /compose/homepage:/app/icons
+      #- /var/run/docker.sock:/var/run/docker.sock
     environment:
       PUID: $PUID
       PGID: $PGID
+    restart: unless-stopped
+
