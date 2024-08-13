@@ -1,0 +1,86 @@
+---
+- Media:
+    - Plex:
+        icon: mdi-plex #plex.png
+        href: "{{HOMEPAGE_VAR_PLEX_HREF}}"
+        description: Media streaming
+        ping: "{{HOMEPAGE_VAR_PLEX_PING}}"
+        widget:
+          type: plex
+          url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+          key: "{{HOMEPAGE_VAR_PLEX_API_KEY}}"
+
+#    - Sonarr:
+#        icon: sonarr.png
+#        href: http://sonarr.host/
+#        description: Series management
+#        widget:
+#          type: sonarr
+#          url: http://sonarr.host
+#          key: apikeyapikeyapikeyapikeyapikey
+
+#   - Radarr:
+#        icon: radarr.png
+#        href: http://radarr.host/
+#        description: Movie management
+#        widget:
+#          type: radarr
+#          url: http://radarr.host
+#          key: apikeyapikeyapikeyapikeyapikey
+
+- Host:
+    - Proxmox:
+        icon: mdi-server #proxmox.png  
+        href: "{{HOMEPAGE_VAR_PROXMOX_HREF}}"
+        description: NODE-1
+        ping: "{{HOMEPAGE_VAR_PROXMOX_PING}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          node: pve
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          token: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+
+    - Proxmox2:
+        icon: mdi-server #proxmox.png
+        href: "{{HOMEPAGE_VAR_PROXMOX_HREF_2}}"
+        description: NODE-2
+        ping: "{{HOMEPAGE_VAR_PROXMOX_PING_2}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL_2}}"
+          node: pve2
+          username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+          token: "{{HOMEPAGE_VAR_PROXMOX_API_KEY2}}"
+
+    - QNAP:
+        icon: mdi-nas #qnap.png
+        href: "{{HOMEPAGE_VAR_QNAP_HREF}}"
+        description: SAN/NAS
+        ping: "{{HOMEPAGE_VAR_QNAP_PING}}"
+        widget:
+          type: qnap
+          url: "{{HOMEPAGE_VAR_QNAP_URL}}"
+          username: "{{HOMEPAGE_VAR_QNAP_USER}}"
+          password: "{{HOMEPAGE_VAR_QNAP_PWD}}"
+
+- Services:
+    - Pi-hole:
+        icon: mdi-pi-hole #pi-hole.png
+        href: "{{HOMEPAGE_VAR_PIHOLE_HREF}}"
+        description: RCS-DNS
+        ping: "{{HOMEPAGE_VAR_PIHOLE_PING}}"
+        widget:
+          type: pihole
+          url: "{{HOMEPAGE_VAR_PIHOLE_URL}}"
+          key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
+
+    - Pi-hole2:
+        icon: mdi-pi-hole #pi-hole.png
+        href: "{{HOMEPAGE_VAR_PIHOLE_HREF_2}}"
+        description: RCS-DNS-P
+        ping: "{{HOMEPAGE_VAR_PIHOLE_PING_2}}"
+        widget:
+          type: pihole
+          url: "{{HOMEPAGE_VAR_PIHOLE_URL_2}}"
+          key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY_2}}"
