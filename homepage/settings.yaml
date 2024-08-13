@@ -1,19 +1,25 @@
 ---
 title: alprojects_dashboard
 theme: dark
-color: slate
+color: violet
 hideVersion: true
 
 layout:
-  Media:
+  Infrastructure & Data:
     style: row
     columns: 3
-  Host:
-    style: row
-    columns: 3
-  Services:
+  Service & Host:
     style: row
     columns: 4
+  Security & Identity:
+    style: row
+    columns: 3
+  Automation & Iot:
+    style: row
+    columns: 3
+  Content & Media:
+    style: row
+    columns: 3
 
 background:
   image: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2560&q=80
@@ -25,3 +31,4 @@ background:
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+
