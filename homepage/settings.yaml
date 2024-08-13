@@ -22,11 +22,11 @@ layout:
     columns: 3
 
 background:
-  image: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2560&q=80
+  image: https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2629&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   blur: sm # Options: sm, "", md, xl... 
-  saturate: 50 # Options: 0, 50, 100
-  brightness: 75 # Options: 0, 50, 75
-  opacity: 75 # Range: 0-100
+  saturate: 80
+  brightness: 100
+  opacity: 50
 
 providers:
   openweathermap: openweathermapapikey
