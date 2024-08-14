@@ -6,29 +6,35 @@ hideVersion: true
 
 layout:
   Infrastructure & Data:
-    style: row
-    columns: 3
-  Service & Host:
+    icon: mdi-server-#FFFFFF
     style: row
     columns: 4
-  Security & Identity:
+  Service & Host:
+    icon: mdi-room-service-#FFFFFF
     style: row
-    columns: 3
+    columns: 4
+  Identity & security:
+    icon: mdi-security-#FFFFFF
+    style: row
+    columns: 4
   Automation & Iot:
+    icon: mdi-cog-outline-#FFFFFF
     style: row
-    columns: 3
+    columns: 6
   Content & Media:
+    icon: mdi-movie-cog-#FFFFFF
     style: row
-    columns: 3
+    columns: 4
 
 background:
-  image: https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2629&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  #image: https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2629&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  image: https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2629&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  #image: https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=2629&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   blur: sm # Options: sm, "", md, xl... 
   saturate: 80
   brightness: 100
-  opacity: 50
+  opacity: 75
 
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
-
