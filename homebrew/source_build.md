@@ -1,4 +1,4 @@
-***Home-brew + Permission Fix + bashrc***
+***Home-brew + Permission fix + bashrc***
 
 ```sh
 1) cp ~/.bashrc ~/.bashrc.backup  **always backup**
@@ -14,3 +14,4 @@
 11) sudo chown ms01:ms01 /home/ms01/.bashrc **must be sudoer**
 12) source ~/.bashrc 
 13) brew --version **4.3.10 for me**
+
