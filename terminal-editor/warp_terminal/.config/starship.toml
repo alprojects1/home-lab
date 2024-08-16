@@ -1,0 +1,40 @@
+# ~/.config/starship.toml
+
+# Use custom format with lines
+format = '''
+[┌───────────────────>](bold green)
+[│](bold green)$os$directory$git_branch$git_status$rust$package$cmd_duration
+[└─>](bold green) '''
+
+# Command Duration Module Configuration
+[cmd_duration]
+min_time = 2000  # Show duration if the command takes longer than 2 seconds
+show_milliseconds = false  # Only show seconds
+format = "took [$duration]($style) "  # Format for displaying the duration
+style = "bold yellow"  # Style for the duration text
+
+# OS module configuration for displaying the Debian logo
+[os]
+format = "[$symbol](bold white) "  # Display the OS symbol in bold white
+disabled = false
+
+[os.symbols]
+# Define symbols for various operating systems
+Windows = " "  # Windows symbol
+Arch = " "     # Arch Linux symbol
+Ubuntu = " "   # Ubuntu symbol
+Macos = " "    # macOS symbol
+Debian = " "   # Debian symbol
+
+# Git Branch Module Configuration
+[git_branch]
+symbol = " "  # This is the branch icon symbol
+format = "on [$symbol$branch]($style) "  # Format for displaying the branch
+style = "bold blue"  # Style for the branch text
+
+# Git Status Module Configuration
+[git_status]
+format = "[$all_status$ahead_behind]($style)"  # Show all status icons
+style = "bold purple"  # Style for the status text
+
+
