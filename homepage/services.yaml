@@ -18,7 +18,7 @@
         widget:
           type: sonarr
           url: "{{HOMEPAGE_VAR_SONARR_URL}}"
-          key:
+          key:"{{HOMEPAGE_VAR_SONARR_API_KEY}}"
 
     - Radarr:
         icon: si-radarr #mdi-radar #radarr.png
@@ -28,7 +28,7 @@
         widget:
           type: radarr
           url: "{{HOMEPAGE_VAR_RADARR_URL}}"
-          key:
+          key:"{{HOMEPAGE_VAR_RADARR_API_KEY}}"
 
     - qBittorrent:
         icon: si-qbittorrent #mdi-download #qbittorrent.png
@@ -43,7 +43,7 @@
 
 - Infrastructure & Data:
     - Proxmox:
-        icon: si-proxmox #mdi-server #proxmox.png  
+        icon: si-proxmox #mdi-server #proxmox.png
         href: "{{HOMEPAGE_VAR_PROXMOX_HREF}}"
         description: Hypervisor 1
         ping: "{{HOMEPAGE_VAR_PROXMOX_PING}}"
@@ -68,17 +68,18 @@
 
     - TrueNAS:
         icon: si-truenas
-        href: 
+        href: "{{HOMEPAGE_VAR_TRUENAS_HREF}}"
         description: Network Attached Storage
-        ping: 
+        ping: "{{HOMEPAGE_VAR_TRUENAS_PING}}"
         widget:
           type: truenas
-          url: 
-          username: 
-          password: 
-          key: 
-          enablePools: true 
-          nasType: scale #
+          url: "{{HOMEPAGE_VAR_TRUENAS_URL}}"
+          username: "{{HOMEPAGE_VAR_TRUENAS_USER}}"
+          password: "{{HOMEPAGE_VAR_TRUENAS_PWD}}"
+          key: "{{OMEPAGE_VAR_TRUENAS_API_KEY}}"
+          enablePools: true
+          nasType: scale
+
     - QNAP:
         icon: mdi-nas #si-qnap #qnap.png
         href: "{{HOMEPAGE_VAR_QNAP_HREF}}"
@@ -87,8 +88,8 @@
         widget:
           type: qnap
           url: "{{HOMEPAGE_VAR_QNAP_URL}}"
-          username: Gizmo"{{HOMEPAGE_VAR_QNAP_USER}}"
-          password: Tensai!@#123 "{{HOMEPAGE_VAR_QNAP_PWD}}"
+          username: "{{HOMEPAGE_VAR_QNAP_USER}}"
+          password: "{{HOMEPAGE_VAR_QNAP_PWD}}"
 
 - Service & Host:
     - Pi-hole:
@@ -164,8 +165,8 @@
         widget:
           type: traefik
           url: "{{HOMEPAGE_VAR_TRAEFIK_URL}}"
-          username: "{{HOMEPAGE_VAR_TRAEFIK_USERNAME}}" # Optional if authentication is needed
-          password: "{{HOMEPAGE_VAR_TRAEFIK_PASSWORD}}" # Optional if authentication is needed
+          username: "{{HOMEPAGE_VAR_TRAEFIK_USERNAME}}"
+          password: "{{HOMEPAGE_VAR_TRAEFIK_PASSWORD}}"
 
 
 - Automation & Iot:
@@ -208,6 +209,7 @@
         ping: "{{HOMEPAGE_VAR_CUPS_PING}}"
         icon: mdi-coffee
 
+
 #   - Home Assistant:
  #       icon: si-homeassistant
  #       href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_HREF}}"
@@ -218,4 +220,3 @@
  #         type: homeassistant
  #         url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
  #         key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_API_KEY}}"
-
