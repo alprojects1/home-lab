@@ -1,0 +1,30 @@
+---
+services:
+  tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:0.20.6
+    container_name: speedtest-tracker
+    ports:
+      - 8080:80
+      - 8443:443
+    volumes:
+      - /compose/tracker/config:/config
+      - /compose/tracker/ssl-keys:/config/keys
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - APP_KEY=base64:ZFUGYve69PPTsRgiutRTmXjW5Whh84PjWm01INWSbqE=
+      - DB_CONNECTION=sqlite
+      - SPEEDTEST_SCHEDULE=0 */2 * * *
+      - PRUNE_RESULTS_OLDER_THAN=30
+      - CHART_DATETIME_FORMAT=MMM D, YYYY h:mm A
+      - DATETIME_FORMAT=YYYY-MM-DD HH:mm:ss
+      - APP_TIMEZONE=America/New_York
+      - APP_NAME=MySpeedTracker
+      - APP_URL=https://speedtest.net
+      - DISPLAY_TIMEZONE=America/New_York
+      - CONTENT_WIDTH=7xl
+      - PUBLIC_DASHBOARD=false
+      - DASHBOARD_POLLING=60s
+      - NOTIFICATION_POLLING=60s
+      - RESULTS_POLLING=false
+    restart: unless-stopped
