@@ -1,0 +1,16 @@
+---
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:nightly-0.4.0.2593-ls332
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /mnt/iscsi/radarr/data:/config
+      - /mnt/iscsi/Movies:/movies
+      - /mnt/iscsi/Downloads:/downloads
+    ports:
+      - 7878:7878
+    restart: unless-stopped
