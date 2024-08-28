@@ -7,6 +7,11 @@
 Traefik's popularity is due in part to its **ease of integration, lightweight nature, and support for a wide range of use cases**, making it an ideal choice for cloud-native applications.
 
 
+## Security & Compliance:
+
+- Traefik assists in maintaining a secure environment by offering robust access control and (`SSL/TLS`) management. It ensures secure communication through (`SSL`) termination and supports Let's Encrypt integration for automated certificate management. Additionally, Traefik's logging and monitoring features aid in tracking access and detecting potential security threats, making it compliant with modern security standards.
+
+
 ## Important Note: 
 **Do NOT** misconfigure Traefik's access control settings. Incorrect settings can expose your services to unauthorized access. Always verify that your ACLs, firewall rules, and authentication methods are correctly configured to protect your services.
 
