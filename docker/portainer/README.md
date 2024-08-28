@@ -24,7 +24,7 @@
 
 - ***Enable RBAC*** - Implement role-based access control to restrict access and define clear user roles within your Portainer environment.
 - ***Regular Backups*** - Regularly back up your Portainer configuration and settings to avoid data loss in case of a failure.
-- ***Use SSL** - Always secure your Portainer instance with SSL to protect communication between your browser and the Portainer server.
+- ***Use SSL*** - Always secure your Portainer instance with SSL to protect communication between your browser and the Portainer server.
 - ***Update Regularly*** - Keep Portainer up to date with the latest releases to benefit from new features and security patches.
 - ***Monitor Logs*** - Regularly review audit logs to track user activity and detect any unauthorized access or changes.
 
