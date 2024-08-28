@@ -1,3 +1,8 @@
+
+
+# alias_collection 
+
+
 # packages
 alias update='sudo apt-get update && sudo apt-get upgrade -y'
 alias clean='sudo apt autoremove && sudo apt autoclean -y'
@@ -42,3 +47,40 @@ alias df='df -h'
 #
 alias netstat='netstat -tuln'
 alias ping='ping -c 5'
+
+# function_collection:
+
+
+# it_collection
+huntit() {
+    sudo find / -name "$1*" 2>/dev/null
+}
+
+killit() {
+    pkill -f "$1"
+}
+
+backit() {
+    src="$1"
+    dest="$2"
+    filename=$(basename "$src")
+
+    if [ -z "$src" ] || [ -z "$dest" ]; then
+        echo "Usage: backit /path/to/source /path/to/backup/destination"
+        return 1
+    fi
+
+    tar -czvf "$dest/$filename-$(date +%Y%m%d%H%M%S).tar.gz" "$src"
+}
+
+sendit() {
+    src="$1"
+    dest="$2"
+
+    if [ -z "$src" ] || [ -z "$dest" ]; then
+        echo "Usage: sendit /path/to/source user@remote:/path/to/destination"
+        return 1
+    fi
+
+    rsync -avh --progress "$src" "$dest"
+}
