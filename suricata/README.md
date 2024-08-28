@@ -5,6 +5,10 @@
 
 Suricata's versatility allows it to be integrated with various security frameworks and platforms, making it a robust solution for monitoring and defending networks against a wide range of threats. **Additionally, Suricata supports multi-threading, GPU acceleration, and is highly scalable, enabling it to handle the demands of modern, high-speed networks**.
 
+## Security & Compliance:
+- Suricata helps in achieving compliance with security regulations like (`PCI-DSS`) and (`HIPAA`) by providing deep packet inspection, intrusion detection, and logging capabilities. It monitors network traffic for policy violations and potential threats, ensuring adherence to regulatory standards. Suricata’s extensive logging and alerting features allow for detailed audit trails and incident response, which are essential for maintaining compliance.
+
+
 ## Important Note:
 
 - (`Do NOT`) overlook the importance of regularly updating Suricata’s rule sets. Outdated or misconfigured rules can lead to false positives, missed detections, and overall reduced effectiveness in identifying and mitigating threats. Always ensure that the rules are optimized for your specific network environment to maintain high levels of security.
