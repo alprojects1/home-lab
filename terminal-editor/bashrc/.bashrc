@@ -27,7 +27,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # git_collection
-alias gitge='git config --global user.email alporjects1@proton.me'
+alias gitge='git config --global user.email alprojects1@proton.me'
 alias gitgu='git config --global user.name LR03'
 alias gpm='git push origin main'
 alias gpd='git push origin dev'
