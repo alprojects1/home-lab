@@ -1,0 +1,19 @@
+---
+services:
+  SERVICE_NAME:
+    image:
+    container_name:
+    ports:
+      - *:*
+    volumes:
+      - /*/*/*:/*
+    environment:
+      - PUID=*
+      - PGID=*
+      - TZ=Etc/UTC
+    healthcheck:
+      test: ["CMD", "curl", "-f", "IP_ADDRESS:PORT || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
