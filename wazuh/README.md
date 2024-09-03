@@ -29,7 +29,7 @@ Wazuh’s XDR capabilities extend beyond traditional security tools by integrati
  
 ## Important Note:
 
-- **Do NOT** misconfigure agent enrollment settings. If agents are not correctly enrolled or if there's a mismatch in authentication tokens, it can lead to failed connections and gaps in security monitoring. Always verify that agent keys are securely stored and matched with the correct Wazuh Manager settings to ensure continuous and accurate data flow from all monitored endpoints. Additionally, avoid modifying system-level files or configurations without proper understanding, as this could disrupt critical security processes and compliance checks.
+- (`Do NOT`) misconfigure agent enrollment settings. If agents are not correctly enrolled or if there's a mismatch in authentication tokens, it can lead to failed connections and gaps in security monitoring. Always verify that agent keys are securely stored and matched with the correct Wazuh Manager settings to ensure continuous and accurate data flow from all monitored endpoints. Additionally, avoid modifying system-level files or configurations without proper understanding, as this could disrupt critical security processes and compliance checks.
 
 ## Best Practices:
 
