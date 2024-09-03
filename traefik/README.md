@@ -13,7 +13,7 @@ Traefik's popularity is due in part to its **ease of integration, lightweight na
 
 
 ## Important Note: 
-**Do NOT** misconfigure Traefik's access control settings. Incorrect settings can expose your services to unauthorized access. Always verify that your ACLs, firewall rules, and authentication methods are correctly configured to protect your services.
+- (`Do NOT`) misconfigure Traefik's access control settings. Incorrect settings can expose your services to unauthorized access. Always verify that your ACLs, firewall rules, and authentication methods are correctly configured to protect your services.
 
 ## Key Features:
 
