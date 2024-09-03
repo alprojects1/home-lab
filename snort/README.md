@@ -15,7 +15,7 @@
 - Snort assists in achieving compliance with security standards like (`PCI-DSS`) by monitoring network traffic for policy violations and potential threats. It ensures that organizations adhere to regulatory requirements by providing detailed audit logs and real-time alerts, crucial for maintaining compliance.
 
 ## Important Note:
-- Do NOT overlook the importance of updating Snort rules regularly. Using outdated rules can lead to false positives or missed detections, compromising network security. Always ensure that your Snort rules are up-to-date to effectively identify and mitigate threats.
+- (`Do NOT`) overlook the importance of updating Snort rules regularly. Using outdated rules can lead to false positives or missed detections, compromising network security. Always ensure that your Snort rules are up-to-date to effectively identify and mitigate threats.
 
 
 ## Key Features:
@@ -27,7 +27,6 @@
 
 
 ## Best Practices:
-
 - ***Rule Management*** - Regularly update your Snort rules to ensure optimal security.
 - ***Network Segmentation*** - Use Snort with network segmentation to isolate and protect critical infrastructure.
 - ***Performance Tuning*** - Optimize Snort's performance by adjusting configurations for your specific network environment.
