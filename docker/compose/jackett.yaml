@@ -1,0 +1,20 @@
+---
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    ports:
+      - 9117:9117
+    volumes:
+      - /compose/jackett/data:/config
+      - /compose/jackett/blackhole:/downloads
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/Toronto
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://IP_ADDRESS:9117 || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
