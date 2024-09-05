@@ -10,10 +10,10 @@ services:
     environment:
       - PUID=*
       - PGID=*
-      - TZ=Etc/UTC
+      - TZ=Etc/toronto
     healthcheck:
       test: ["CMD", "curl", "-f", "IP_ADDRESS:PORT || exit 1"]
-      interval: 1m30s
+      interval: 40s
       timeout: 10s
       retries: 3
     restart: unless-stopped
