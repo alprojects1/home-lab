@@ -13,8 +13,8 @@ services:
       - PGID=1000
       - TZ=Etc/Toronto
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://IP_ADDRESS:9117 || exit 1"]
-      interval: 1m30s
+      test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS:8989 || exit 0"]
+      interval: 40s
       timeout: 10s
       retries: 3
     restart: unless-stopped
