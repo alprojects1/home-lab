@@ -4,8 +4,8 @@ services:
     image: lscr.io/linuxserver/kali-linux:latest
     container_name: kali-linux
     security_opt:
-      - seccomp:unconfined # allowing all system calls in the container/this is needed for older apps 
-      - no-new-privileges:true
+      - seccomp:unconfined # allowing all system calls in the container/this is neede>
+      - no-new-privileges:false
     environment:
       - PUID=1000
       - PGID=1000
@@ -14,12 +14,13 @@ services:
       - "TITLE=Gizmo Linux"
     volumes:
       - /compose/kali/data:/config
+      - /tmp/.X11-unix:/tmp/.X11-unix
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
-      - 3000:3000
-      - 3001:3001
+      #- 3000:3000
+      - 3002:3001
     devices:
-      - /dev/dri:/dev/dri # Containers that need direct access to the GPU for hardware-accelerated 
+      - /dev/dri:/dev/dri # for containers that need direct access to the GPU for har>
     shm_size: "1gb" # Anything lower breaks modren browsers
     healthcheck:
       test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS:3001 || exit 0"]
