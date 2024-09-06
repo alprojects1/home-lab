@@ -2,16 +2,12 @@
 services:
   ansible:
     image: python:3.12-slim
-    container_name: ansible_container
+    container_name: ansible
     volumes:
-      - ./playbooks:/ansible/playbooks
+      - /compose/playbooks:/ansible/playbooks
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Calgary
-    healthcheck:
-      test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS || exit 0"]
-      interval: 40s
-      timeout: 10s
-      retries: 3
+    command: /bin/bash -c "pip install ansible && tail -f /dev/null"
     restart: unless-stopped
