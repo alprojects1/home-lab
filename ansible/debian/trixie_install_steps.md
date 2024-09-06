@@ -16,7 +16,7 @@
 ***Updating***
 
 ```sh
-1) source /ansible/venv/bin/activate
+1) source /ansible/venv/bin/activate **needed each time**
 2) pip install --upgrade ansible
 3) deactivate
 ```
