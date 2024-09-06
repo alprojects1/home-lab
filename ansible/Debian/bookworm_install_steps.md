@@ -1,10 +1,11 @@
 ***Path + Permissions + Bashrc***
 
 ```sh
-mkdir /ansible
-sudo chown echo:echo /ansible **amake sure user in sudoers group**
-export ANSIBLE_HOME=/ansible **set ANSIBLE_HOME environment variable**
-export PATH=$PATH:$ANSIBLE_HOME/bin
+1) mkdir /ansible
+2) sudo chown echo:echo /ansible **amake sure user in sudoers group**
+3) export ANSIBLE_HOME=/ansible **set ANSIBLE_HOME environment variable**
+4) chmod 740 /ansible **lock to user or group** 
+5) export PATH=$PATH:$ANSIBLE_HOME/bin
 ```
 
 ***Dependecies + Codename + PPA*** 
