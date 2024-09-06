@@ -1,8 +1,5 @@
 ***Package Isolation + Python Virtual Environment + Source List***
 
-### Each Time: **source /ansible/venv/bin/activate**
-
-
 ```sh
 1) sudo apt install python3 python3-pip -y **you can compile your own or package**
 2) sudo apt install python3-venv **Virtual Environment**
@@ -16,4 +13,10 @@
 10) pip install --upgrade pip setuptools **if not updated**
 11) ansible --version **[core 2.17.3]**
 ```
+***Updating***
 
+```sh
+1) source /ansible/venv/bin/activate
+2) pip install --upgrade ansible
+3) deactivate
+```
