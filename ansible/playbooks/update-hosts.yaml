@@ -7,7 +7,7 @@
       apt:
         update_cache: yes
 
-    - name: Upgrade all packages to the latest version
+    - name: Upgrade packages list
       apt:
         upgrade: dist
         autoremove: yes
