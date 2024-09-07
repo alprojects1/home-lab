@@ -1,0 +1,35 @@
+---
+- name: Deploy Kali Linux via Docker
+  hosts: "{{ my_hosts | d([]) }}"
+  tasks:
+    - name: Deploy Kali Linux container
+      community.docker.docker_container:
+        name: kali-linux
+        image: lscr.io/linuxserver/kali-linux:latest
+        ports:
+          - "3004:3004"
+          - "3002:3001"
+        volumes:
+          - /compose/kali/data:/config
+          - /tmp/.X11-unix:/tmp/.X11-unix
+          - /var/run/docker.sock:/var/run/docker.sock:ro
+        devices:
+          - "/dev/dri:/dev/dri"
+        shm_size: "1gb"
+        security_opt:
+          - seccomp:unconfined
+          - no-new-privileges:false
+        environment:
+          - PUID=1000
+          - PGID=1000
+          - TZ=America/Calgary
+          - SUBFOLDER=/kali
+          - TITLE=Gizmo Linux
+        healthcheck:
+          test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS:3001 || exit 0"]
+          interval: 40s
+          timeout: 10s
+          retries: 3
+        restart_policy: unless-stopped
+      become: true
+      become_user: "{{ lookup('env', 'USER') }}"
