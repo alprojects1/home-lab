@@ -1,6 +1,5 @@
 # alias_collection 
 
-
 # packages
 alias update='sudo apt-get update && sudo apt-get upgrade -y'
 alias clean='sudo apt autoremove && sudo apt autoclean -y'
@@ -23,6 +22,33 @@ alias ..='cd ..'
 alias ll='ls -ali'
 alias la='ls -A'
 alias l='ls -CF'
+
+# ansible_collection
+
+alias testsyntaxa='ansible-playbook --syntax-check'
+alias clearssh='rm -rf home/echo/.ssh/known_hosts'
+alias restarta='sudo systemctl restart ansible'
+alias venv='source /ansible/venv/bin/activate'
+alias checkinva='ansible-inventory --list -y'
+alias listhostsa='ansible all --list-hosts'
+alias playbookv='ansible-playbook -v'
+alias versiona='ansible --version'
+alias pinga='ansible all -m ping'
+alias playa='ansible-playbook'
+alias cmdalla='ansible all -a'
+alias sshlist='ssh-add -l'
+
+# docker_collection
+alias dcu='docker compose up -d'
+alias dcb='docker compose build'
+alias dcd='docker compose down'
+alias dcl='docker compose logs'
+alias dps='docker compose ps'
+alias dce='docker compose exec'
+alias dnet='docker network ls'
+alias dclf='docker compose logs -f'
+alias dneti='docker network inspect'
+alias swarmkill='docker kill $(docker ps -q)'
 
 # git_collection
 alias gitge='git config --global user.email alprojects1@proton.me'
@@ -85,7 +111,7 @@ sendit() {
     rsync -avh --progress "$src" "$dest"
 }
 
-# docker_compose_function
+# docker compose function
 
 function compose_ip() {
   container=$1
