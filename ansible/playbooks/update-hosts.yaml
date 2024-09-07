@@ -1,0 +1,14 @@
+---
+- name: Update Proxmox Hosts
+  hosts: all
+  become: true
+  tasks:
+    - name: Update package list
+      apt:
+        update_cache: yes
+
+    - name: Upgrade all packages to the latest version
+      apt:
+        upgrade: dist
+        autoremove: yes
+        autoclean: yes
