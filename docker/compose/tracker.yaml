@@ -1,10 +1,10 @@
 ---
 services:
   tracker:
-    image: lscr.io/linuxserver/speedtest-tracker:0.20.6
+    image: lscr.io/linuxserver/speedtest-tracker:0.21.2
     container_name: speedtest-tracker
     ports:
-      - 8080:80
+      - 8686:80
       - 8443:443
     volumes:
       - /compose/tracker/config:/config
@@ -27,4 +27,10 @@ services:
       - DASHBOARD_POLLING=60s
       - NOTIFICATION_POLLING=60s
       - RESULTS_POLLING=false
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://10.100.100.234:8080 || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
     
