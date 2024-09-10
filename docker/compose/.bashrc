@@ -25,6 +25,6 @@ function compose_shell() {
 function compose_inspect() {
   container=$1
   docker inspect $(docker ps -qf "name=$container")
-
+}
 
 
