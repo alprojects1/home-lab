@@ -1,7 +1,15 @@
 ---
-- name: Deploy Kali Linux via Docker
+- name: Deploy Kali via Ansible Docker
   hosts: "{{ my_hosts | d([]) }}"
   tasks:
+    - name: Ensure the /compose/kali/data directory exists
+      file:
+        path: /compose/kali/data
+        state: directory
+        mode: '0755'
+        owner: echo
+        group: echo
+
     - name: Deploy Kali Linux container
       community.docker.docker_container:
         name: kali-linux
