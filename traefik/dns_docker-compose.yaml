@@ -14,7 +14,7 @@ services:
       - /run/docker.sock:/run/docker.sock
     environment:
       - CF_API_EMAIL=EMAIL # or use secret
-      - CF_DNS_API_TOKEN=KEY # or use sercet 
+      - CF_DNS_API_TOKEN=KEY # or use secret 
       - PUID=1000
       - PGID=1000
     healthcheck:
