@@ -8,3 +8,10 @@
 5) ssh-copy-id -i ~/.ssh/id_ed25519.pub root@HS01.alprojects.tech
 6) ssh-copy-id -i ~/.ssh/id_ed25519.pub root@HS02.alprojects.tech
 ```
+
+***Passphrase add***
+```
+1) eval $(ssh-agent)
+2) ssh-add ~/.ssh/id_ed25519 **will be prompted to enter the passphrase**
+3) ssh-add -l
+```
