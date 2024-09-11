@@ -1,6 +1,6 @@
 ## GitLab Wiki:
 
-**GitLab is a comprehensive DevOps platform that allows teams to collaborate, manage, and automate their development workflows**. It offers features such as version control (powered by Git), (`CI/CD`) pipelines, issue tracking, and project management, all in one place.**created by Sid Sijbrandij, Dmitriy Zaporozhets, and the wider GitLab community. Initially written in Ruby and later expanded with Go**, 
+**GitLab is a comprehensive DevOps platform that allows teams to collaborate, manage, and automate their development workflows**. It offers features such as version control (`powered by Git`), (`CI/CD`) pipelines, issue tracking, and project management, all in one place.**created by Sid Sijbrandij, Dmitriy Zaporozhets, and the wider GitLab community. Initially written in Ruby and later expanded with Go**, 
 
 GitLab helps teams manage every aspect of the software development lifecycle, from version control to deployment. In addition to Git-powered version control, **GitLab provides integrated tools like (`CI/CD`) pipelines, issue tracking, project management, Docker container registry, and monitoring**. GitLab also supports a vast range of **integrations including Kubernetes, Jira, Jenkins, Prometheus, and Slack, enabling teams to customize their workflows**.
 
