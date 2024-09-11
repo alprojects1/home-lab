@@ -1,5 +1,4 @@
 ***Package Isolation + Python Virtual Environment + Source List***
-
 ```sh
 1) sudo apt install python3 python3-pip -y **you can compile your own or package**
 2) sudo apt install python3-venv **Virtual Environment**
@@ -12,9 +11,10 @@
 9) pip install ansible
 10) pip install --upgrade pip setuptools **if not updated**
 11) ansible --version **[core 2.17.3]**
+12) python --version **Python 3.12.6**
 ```
-***Updating***
 
+***Updating***
 ```sh
 1) source /ansible/venv/bin/activate **needed each time**
 2) pip install --upgrade ansible
