@@ -49,11 +49,11 @@ Classified Patterns:
 
 ## Example Table for Classification:
 
-- Example Table for Classification:
-- Event Type	Shared Organizational Tasks	CI/CD Patterns
-- Concert	Ticketing, security, crowd control	Infrastructure, security, notifications
-- Sports Game	Ticketing, security, vendor management	Infrastructure, security, vendor onboarding
-- Conference	Scheduling, registration, VIP management	Content management, scheduling, guest logistics
+| Event Type   | Shared Organizational Tasks                | CI/CD Patterns                                          |
+|--------------|--------------------------------------------|--------------------------------------------------------|
+| Concert      | Ticketing, security, crowd control          | Infrastructure, security, notifications                 |
+| Sports Game  | Ticketing, security, vendor management      | Infrastructure, security, vendor onboarding             |
+| Conference   | Scheduling, registration, VIP management    | Content management, scheduling, guest logistics         |
 
-
+##
 > This Chain of steps—starting with abstraction, moving through decomposition, and then identifying patterns—the event planning process is greatly simplified and automated using GitLab CI/CD, leading to efficiency and error reduction in the event management process. I open for questions :) 
