@@ -1,6 +1,8 @@
 ## Ansible Wiki:
 
-**Ansible is an open-source automation tool that simplifies the management of IT infrastructure by automating tasks like configuration management, application deployment, and orchestration**. It’s agentless, meaning it operates over SSH without needing any special software installed on the managed nodes. **Ansible is written in Python and uses simple YAML-based playbooks to define tasks, making it accessible for both seasoned professionals and those new to automation**. Licensed under the GNU General Public License (`GPLv3`), Ansible has a strong community and is widely adopted in the DevOps world.
+**Ansible is an open-source automation tool that simplifies the management of IT infrastructure by automating tasks like configuration management, application deployment, and orchestration**. It’s agentless, meaning it operates over SSH without needing any special software installed on the managed nodes. 
+
+**Ansible is written in Python and uses simple YAML-based playbooks to define tasks, making it accessible for both seasoned professionals and those new to automation**. Licensed under the GNU General Public License (`GPLv3`), Ansible has a strong community and is widely adopted in the DevOps world.
 
 **Ansible stands out due to its simplicity and powerful features like idempotency, which ensures that tasks are only executed when necessary, avoiding unnecessary changes**. Its modular architecture supports a wide range of integrations and allows users to create custom modules in various languages. Ansible’s extensive library of pre-built modules makes it highly adaptable for different environments, whether on-premises, in the cloud, or in hybrid setups.
 
