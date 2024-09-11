@@ -12,7 +12,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - APP_KEY=base64:ZFUGYve69PPTsRgiutRTmXjW5Whh84PjWm01INWSbqE=
+      - APP_KEY=KEY
       - DB_CONNECTION=sqlite
       - SPEEDTEST_SCHEDULE=0 */1 * * *
       - PRUNE_RESULTS_OLDER_THAN=30
@@ -33,4 +33,5 @@ services:
       timeout: 10s
       retries: 3
     restart: unless-stopped
-    
+
+
