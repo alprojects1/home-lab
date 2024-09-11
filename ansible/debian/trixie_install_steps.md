@@ -8,10 +8,11 @@
 6) python3 -m venv /ansible/venv **Create the env**
 7) sudo chown -R echo:echo /ansible/venv **to install packages**
 8) source /ansible/venv/bin/activate **Activate the env**
-9) pip install ansible
-10) pip install --upgrade pip setuptools **if not updated**
-11) ansible --version **[core 2.17.3]**
-12) python --version **Python 3.12.6**
+9) export PATH=$PATH:/ansible/bin
+10) pip install ansible
+11) pip install --upgrade pip setuptools **if not updated**
+12) ansible --version **[core 2.17.3]**
+13) python --version **Python 3.12.6**
 ```
 
 ***Updating***
