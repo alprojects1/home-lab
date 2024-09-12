@@ -1,5 +1,5 @@
 ---
-- name: Deploy Kali Linux with Docker Compose
+- name: Deploy via Docker Compose
   hosts: localhost
   tasks:
     - name: Ensure the /compose/kali directory exists
@@ -8,7 +8,7 @@
         state: directory
         mode: '0755'
 
-    - name: Create Docker Compose file for Kali Linux
+    - name: Create Compose file for Kali 
       copy:
         dest: /compose/kali/docker-compose.yml
         content: |
