@@ -2,6 +2,7 @@
 
 **Python is an open-source, high-level programming language known for its simplicity and versatility. Designed by Guido van Rossum in 1991, Python emphasizes code readability and supports multiple programming paradigms, including procedural, object-oriented, and functional programming**. Python is widely used in web development, automation, data analysis, artificial intelligence, and more. 
 
+**Do you remember Battlefield 2, Battlefield 2142 and Battlefield Heroes - strategy and first person shooter games from EA DICE? All the games use Python for logic and server controls**. Python is frequently used for creating open-source, free games, e.g., OpenRTS, PySol, Metin 2, or Frets On Fire - **famous Guitar Hero-like games written in pygame**.
 
 **It has a massive standard library, making it adaptable to countless applications. Python's community-driven nature ensures ongoing development and support, with popular frameworks like Django and Flask accelerating web development projects**. Python is often praised for its dynamic typing, interpreted nature, and ease of use for beginners while maintaining power and scalability for more advanced projects. It can be run on all major platforms like Windows, macOS, and Linux.
 
