@@ -6,17 +6,27 @@
 
 Python emphasizes code readability and supports multiple programming paradigms, including procedural, object-oriented, and functional programming**. Python is widely used in web development, automation, data analysis, artificial intelligence, and more. **Major websites and services like (`Dropbox`), (`Uber`), (`Spotify`), (`Pintrest`), (`BuzzFee`)** were all written, to a greater or lesser extent, in Python.
 
-**Do you remember (`Battlefield 2`), (`Battlefield 2142`) and (`Battlefield Heroes`) - strategy and first person shooter games from (`EA`) (`DICE`)? All the games use Python for logic and server controls**. **Python is frequently used for creating open-source, free games, like (`OpenRTS`), (`PySol`), (`Metin 2`), or (`Frets On Fire`) - and (`Guitar Hero`)-like games written in pygame**. 
+**Do you remember (`Battlefield 2`), (`Battlefield 2142`) and (`Battlefield Heroes`) - strategy and first person shooter games from (`EA`) (`DICE`)? All the games use Python for logic and server controls**. **Python is frequently used for creating open-source, free games, like (`OpenRTS`), (`PySol`), (`Metin 2`), or (`Frets On Fire`) and (`Guitar Hero`)-like games written in pygame**. 
 
 **while you may know the python as a large snake, the name of the Python programming language comes from an old BBC television comedy sketch series called Monty Python's Flying Circus**. At the height of its success, the Monty Python team were performing their sketches to live audiences across the world, including at the Hollywood Bowl. **Since Monty Python is considered one of the two fundamental nutrients to a programmer** (`the other being pizza`), Python's creator named the language in honor of the TV show.
 
 
 ## PyCharm Wiki:
 
-**PyCharm is a powerful integrated development environment (IDE) specifically designed for Python programming**. Developed by JetBrains and released in 2010, PyCharm offers extensive code analysis, support for web frameworks (`like Django`), and a vast array of tools that help streamline Python development. PyCharm's features include intelligent code completion, on-the-fly error checking, and seamless integration with version control systems like Git.
+**PyCharm is a powerful integrated development environment (IDE) specifically designed for Python programming**. Developed by (`JetBrains`) and released in 2010, PyCharm offers extensive code analysis, support for web frameworks (`like Django`), and a vast array of tools that help streamline Python development. PyCharm's features include intelligent code completion, on-the-fly error checking, and seamless integration with version control systems like Git.
 
 PyCharm comes in two versions: Community Edition (`open-source`) and Professional Edition (`commercial`), with the latter offering additional support for web development, scientific computing, and remote development.
 
+
+## Python Rivals:
+
+- **Python has two direct competitors, with comparable properties and predispositions. The former is more traditional and more conservative than Python**, and resembles some of the old languages derived from the classic C programming language. 
+
+    - ***Perl*** – a scripting language originally authored by Larry Wall.
+    - ***Ruby*** – a scripting language originally authored by Yukihiro Matsumoto.
+ 
+- **In contrast, the latter is more innovative and more full of fresh ideas than Python. Python itself lies somewhere between these two creations**.
+    
 ## Security & Compliance:
 
 - ***Python Security*** - Python supports a range of security-focused libraries (`PyCryptodome, Secure-SMTPLib`) that can be used to ensure encrypted communications, secure data storage, and safe web interactions.
