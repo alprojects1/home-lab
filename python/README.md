@@ -23,18 +23,18 @@ PyCharm comes in two versions: Community Edition (`open-source`) and Professiona
 
 ## Key Features:
 
-- ***Python:****
+- ***Python***
   - ***Cross-platform*** - Works across Windows, macOS, and Linux.
   - ***Extensive Standard Library*** - Offers modules for everything from file I/O to networking.
   - ***Diverse Use Cases*** - Powers web development, machine learning, AI, automation, and data analysis. 
   - ***Community Support*** A large, active community continually contributes packages and tutorials.
 
 - ***PyCharm***
-
   - ***Code Intelligence*** - Features intelligent code completion and on-the-fly syntax and error checking.
   - ***Debugger*** - Powerful built-in debugger with visual stepping through code.
   - ***Integration*** - Seamlessly integrates with (`Git`), (`GitHub`), and other version control tools.
   - ***Testing Frameworks*** - Built-in support for unit testing, with integration for pytest and unittest.
+
 
 ## Best Practices:
 
