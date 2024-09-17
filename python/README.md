@@ -43,10 +43,10 @@ PyCharm comes in two versions: Community Edition (`open-source`) and Professiona
 
 ## Best Practices:
 
- - ***Use Virtual Environments*** - Isolate project dependencies using venv or Conda to avoid conflicts between libraries.
- - ***Code Style*** - Adhere to the PEP 8 style guide to maintain readability and consistency across Python codebases.
- - ***Leverage PyCharm’s Refactoring Tools*** - Use PyCharm's refactoring features to improve code structure, reduce duplication, and enhance maintainability.
- - ***Test Early, Test Often*** - Automate testing through PyCharm’s built-in testing framework integration to catch errors before deployment.
+  - ***Use Virtual Environments*** - Isolate project dependencies using venv or Conda to avoid conflicts between libraries.
+  - ***Code Style*** - Adhere to the PEP 8 style guide to maintain readability and consistency across Python codebases.
+  - ***Leverage PyCharm’s Refactoring Tools*** - Use PyCharm's refactoring features to improve code structure, reduce duplication, and enhance maintainability.
+  - ***Test Early, Test Often*** - Automate testing through PyCharm’s built-in testing framework integration to catch errors before deployment.
 
 
 
