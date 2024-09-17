@@ -1,10 +1,15 @@
 ## Python Wiki:
 
-**Python is an open-source, high-level programming language known for its simplicity and versatility. Designed by Guido van Rossum in 1991, Python emphasizes code readability and supports multiple programming paradigms, including procedural, object-oriented, and functional programming**. Python is widely used in web development, automation, data analysis, artificial intelligence, and more. **Major websites and services like Dropbox, UBER, Spotify, Pintrest, BuzzFee** were all written, to a greater or lesser extent, in Python.
+**Python is an open-source, high-level programming language known for its simplicity and versatility. Designed by Guido van Rossum in 1991, in Haarlem, the Netherlands. Of course, Guido van Rossum did not develop and evolve all the Python components himself**. It has a massive standard library, making it adaptable to countless applications. 
 
-**Do you remember Battlefield 2, Battlefield 2142 and Battlefield Heroes - strategy and first person shooter games from EA DICE? All the games use Python for logic and server controls**. Python is frequently used for creating open-source, free games, e.g., OpenRTS, PySol, Metin 2, or Frets On Fire - **famous Guitar Hero-like games written in pygame**. 
+**Python's community-driven nature ensures ongoing development and support, with popular frameworks like Django and Flask accelerating web development projects**. Python is often praised for its dynamic typing, interpreted nature, and ease of use for beginners while maintaining power and scalability for more advanced projects. It can be run on all major platforms like (`Windows`), (`macOS`), and (`Linux`).
 
-**It has a massive standard library, making it adaptable to countless applications. Python's community-driven nature ensures ongoing development and support, with popular frameworks like Django and Flask accelerating web development projects**. Python is often praised for its dynamic typing, interpreted nature, and ease of use for beginners while maintaining power and scalability for more advanced projects. It can be run on all major platforms like Windows, macOS, and Linux.
+Python emphasizes code readability and supports multiple programming paradigms, including procedural, object-oriented, and functional programming**. Python is widely used in web development, automation, data analysis, artificial intelligence, and more. **Major websites and services like (`Dropbox`), (`Uber`), (`Spotify`), (`Pintrest`), (`BuzzFee`)** were all written, to a greater or lesser extent, in Python.
+
+**Do you remember (`Battlefield 2`), (`Battlefield 2142`) and (`Battlefield Heroes`) - strategy and first person shooter games from (`EA`) (`DICE`)? All the games use Python for logic and server controls**. Python is frequently used for creating open-source, free games, like (`OpenRTS`), (`PySol`), (`Metin 2`), or (`Frets On Fire`) - and (`Guitar Hero`)-like games written in pygame**. 
+
+**while you may know the python as a large snake, the name of the Python programming language comes from an old BBC television comedy sketch series called Monty Python's Flying Circus**. At the height of its success, the Monty Python team were performing their sketches to live audiences across the world, including at the Hollywood Bowl. **Since Monty Python is considered one of the two fundamental nutrients to a programmer** (`the other being pizza`), Python's creator named the language in honor of the TV show.
+
 
 ## PyCharm Wiki:
 
