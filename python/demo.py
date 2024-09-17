@@ -1,4 +1,4 @@
-# ==================================================
+# define a function called print_pylife_pycharm_pylife that takes an argument name + block checking
 def print_pylife_pycharm_pylife (name):
     print(f'pylife pycharm pylife {name}')
 
