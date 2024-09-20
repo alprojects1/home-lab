@@ -1,3 +1,4 @@
+# I had soem fun with this one, reason for def&if is if I decide to import it as module.
 def print_linux_tree():
     print("              Red Hat Linux")
     print("                   |")
