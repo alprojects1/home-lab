@@ -21,3 +21,7 @@ function ansible_update() {
 function ansible_kali() {
     ansible-playbook -i /ansible/venv/inventory /ansible/venv/playbooks/ansible-kali.yaml
 }
+
+function ansible_sshd() {
+    asnible-playbook  -i /ansible/venv/inventory /ansible/venv/playbooks/ansible-sshd.yaml
+}
