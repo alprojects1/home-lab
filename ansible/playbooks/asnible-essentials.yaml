@@ -1,0 +1,13 @@
+#Automation for install my basics
+---
+- name: essentials packages
+  host: all
+  become: true
+  task:
+    - name: Installing git, curl, net-tools
+      ansible.builtin.package:
+        name:
+          - git
+          - curl
+          - net-tools
+        state: present
