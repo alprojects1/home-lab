@@ -20,4 +20,4 @@ fi
 # Re-source .bashrc
 source ~/.bashrc
 
-echo "Keychain removed & .bashrc cleanup complete!"
+echo "It is done....."
