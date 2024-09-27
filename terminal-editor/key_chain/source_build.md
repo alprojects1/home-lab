@@ -9,3 +9,12 @@
 6) eval $(/opt/keychain/keychain --eval --agents ssh id_ed25519) **persistant ssh**
 7) source ~/.bashrc
 ```
+
+***Symbolic Link***
+
+```sh
+1) sudo ln -s /opt/keychain/keychain /usr/local/bin/keychain **must for terminal only**
+2) keychain --version
+3) which keychain **should return /usr/local/bin/keychain**
+```
+
