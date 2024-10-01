@@ -7,10 +7,10 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - /compose/traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      - /compose/traefik/data/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      - /compose/traefik/data/acme.json:/acme.json
       - /compose/traefik/certs/:/etc/traefik/certs/
       - /compose/traefik/conf/:/etc/traefik/conf/
-      - /compose/traefik/acme.json:/acme.json
       - /run/docker.sock:/run/docker.sock:ro
     environment:
       - CF_API_EMAIL=EMAIL # or use secret
