@@ -34,8 +34,8 @@
                 - PUID=1000
                 - PGID=1000
                 - TZ=America/Calgary
-                - SUBFOLDER=/kali
-                - TITLE=Gizmo Linux
+                #- SUBFOLDER=/kali
+                - TITLE="Gizmo Linux"
               healthcheck:
                 test: ["CMD-SHELL", "curl --fail http://localhost:3001 || exit 0"]
                 interval: 40s
