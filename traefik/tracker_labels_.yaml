@@ -1,5 +1,5 @@
-
-    services:
+---
+services:
   tracker:
     image: lscr.io/linuxserver/speedtest-tracker:0.21.2
     container_name: speedtest-tracker
