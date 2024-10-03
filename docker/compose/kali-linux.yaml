@@ -1,29 +1,38 @@
 ---
 services:
-  kali:
+  kali-linux:
     image: lscr.io/linuxserver/kali-linux:latest
     container_name: kali-linux
+    hostname: KALI01
+    ports:
+      - 3004:3004
+      - 3002:3001
+      - 5901:5901
+    volumes:
+      - /compose/kali/data:/config
+      - /compose/kali/home:/home/echo
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /etc/localtime:/etc/localtime:ro
+      - /compose/kali/etc/hosts:/etc/hosts
+      - /compose/kali/etc/hostname:/etc/hostname
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /compose/kali/etc/resolv.conf:/etc/resolv.conf
+      - /compose/kali/data/ssl/cert.pem:/etc/nginx/cert.pem
+      - /compose/kali/data/ssl/cert.key:/etc/nginx/cert.key
+    devices:
+      - /dev/dri:/dev/dri
+    shm_size: "1gb"
     security_opt:
-      - seccomp:unconfined # allowing all system calls in the container/this is needed in my case 
-      - no-new-privileges:false
+      - seccomp=unconfined
+      - no-new-privileges=false
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Calgary
       #- SUBFOLDER=/kali
-      - TITLE="Gizmo Linux"
-    volumes:
-      - /compose/kali/data:/config
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    ports:
-      - 3004:3004
-      - 3002:3001
-    devices:
-      - /dev/dri:/dev/dri # for containers that need direct access to the GPU
-    shm_size: "1gb" # Anything lower breaks modren browsers
+      - TITLE="Gizmo_Linux"
     healthcheck:
-      test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS:3001 || exit 0"]
+      test: ["CMD-SHELL", "curl --fail http://localhost:3001 || exit 0"]
       interval: 40s
       timeout: 10s
       retries: 3
