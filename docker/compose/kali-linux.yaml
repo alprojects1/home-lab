@@ -14,6 +14,9 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /etc/localtime:/etc/localtime:ro
       - /compose/kali/etc/hosts:/etc/hosts
+      - /compose/kali/var/lib/apt:/var/lib/apt
+      - /compose/kali/var/lib/dpkg:/var/lib/dpkg
+      - /compose/kali/var/cache/apt:/var/cache/apt
       - /compose/kali/etc/hostname:/etc/hostname
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /compose/kali/etc/resolv.conf:/etc/resolv.conf
