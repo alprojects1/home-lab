@@ -1,0 +1,12 @@
+---
+services:
+  argo_tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: argo
+    command: tunnel --no-autoupdate run --token TOKEN_HERE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Calgary
+
+                          
