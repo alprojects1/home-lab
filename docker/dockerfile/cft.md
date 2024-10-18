@@ -10,8 +10,5 @@ RUN apt-get update && apt-get install -y curl dpkg git bash \
 RUN curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb \
     && dpkg -i cloudflared.deb
 
-# argo tunnel service + provided token
-RUN cloudflared service install TOKEN_HERE
-
-# cloudflared to run as the default command
-CMD ["cloudflared", "tunnel", "--no-autoupdate", "run"]
+# CMD + variable secret
+CMD ["cloudflared", "tunnel", "--no-autoupdate", "run", "--token", "${CLOUDFLARED_TOKEN}"]
