@@ -8,6 +8,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Calgary
+    restart: unless-stopped
   argo_tunnel_2:
     image: cloudflare/cloudflared:latest
     container_name: argo_2
@@ -16,6 +17,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Calgary
+    restart: unless-stopped
   argo_tunnel_3:
     image: cloudflare/cloudflared:latest
     container_name: argo_3
@@ -24,4 +26,5 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Calgary
+    restart: unless-stopped
                           
