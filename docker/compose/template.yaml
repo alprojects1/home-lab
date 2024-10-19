@@ -10,7 +10,7 @@ services:
     environment:
       - PUID=*
       - PGID=*
-      - TZ=Etc/toronto
+      - TZ=America/Calgary
     healthcheck:
       test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS:8989 || exit 0"]
       interval: 40s
