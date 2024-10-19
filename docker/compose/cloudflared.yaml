@@ -1,12 +1,27 @@
 ---
 services:
-  argo_tunnel:
+  argo_tunnel_1:
     image: cloudflare/cloudflared:latest
-    container_name: argo
+    container_name: argo_1
     command: tunnel --no-autoupdate run --token TOKEN_HERE
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Calgary
-
+  argo_tunnel_2:
+    image: cloudflare/cloudflared:latest
+    container_name: argo_2
+    command: tunnel --no-autoupdate run --token TOKEN_HERE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Calgary
+  argo_tunnel_3:
+    image: cloudflare/cloudflared:latest
+    container_name: argo_3
+    command: tunnel --no-autoupdate run --token TOKEN_HERE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Calgary
                           
