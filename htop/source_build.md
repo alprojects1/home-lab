@@ -8,12 +8,12 @@
 5) cd htop **ls -lah always, get use to structures**
 6) ./autogen.sh **runs autotools commands, generates configuration scripts, checks dependencies**
 7) ./configure **system Inspection, generate makefiles, set configuration options** 
-8) make -j6 (or your core count) 
+8) make -j$(nproc) **dynamically fetches cores**
 9) make install
-10) ls -l /usr/local/bin/ (should see htop) 
-11) echo $PATH (noticed /usr/local/bin/ missing) 
+10) ls -l /usr/local/bin/ **should see htop** 
+11) echo $PATH **noticed /usr/local/bin/ missing** 
 12) echo 'export PATH=/usr/local/bin:$PATH' >> ~/.profile **add path**
 13) source ~/.profile 
-14) top --version **htop 3.4.0-dev-3.3.0-141-g58efa4e**
+14) htop --version **htop 3.4.0-dev-3.3.0-141-g58efa4e**
 15) htop
 16) cp ~/.config/htop/htoprc ~/.config/htop/htoprc.bak **backup config**
