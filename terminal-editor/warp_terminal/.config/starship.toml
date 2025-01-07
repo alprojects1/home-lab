@@ -2,9 +2,11 @@
 
 # Use custom format with lines
 format = '''
-[┌───────────────────>](bold green)
+[========================>](bold purple)
+[┌──────────────────>](bold green)
 [│](bold green)$os$directory$git_branch$git_status$rust$package$cmd_duration
-[└─>](bold green) '''
+[└─────>](bold green)
+[===========>](bold purple)'''
 
 # Command Duration Module Configuration
 [cmd_duration]
@@ -36,5 +38,3 @@ style = "bold blue"  # Style for the branch text
 [git_status]
 format = "[$all_status$ahead_behind]($style)"  # Show all status icons
 style = "bold purple"  # Style for the status text
-
-

@@ -1,4 +1,4 @@
-***Docker + Permissions + Lxc***
+***Install + Permissions + Lxc***
 
 #### OS: Debian 13 (Trixie)
 #### environment: su
