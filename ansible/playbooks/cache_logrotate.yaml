@@ -4,6 +4,35 @@
   become: yes
 
   tasks:
+    - name: Ensure clear_mem_cache.log exists
+      file:
+        path: /var/log/clear_mem_cache.log
+        state: touch
+        owner: root
+        group: root
+        mode: '0640'
+
+    - name: Create mem-cache clearing script
+      copy:
+        dest: /scripts/clear_mem_cache.sh
+        content: |
+          #!/bin/bash
+          LOG_FILE="/var/log/clear_mem_cache.log"
+
+          # Ensure log file exists & has correct permissions
+          if [ ! -f "$LOG_FILE" ]; then
+              touch $LOG_FILE
+              chmod 640 $LOG_FILE
+          fi
+
+          # Log action with mem-status before & after
+          echo "$(date '+%Y-%m-%d %H:%M:%S') - Clearing mem cache. Free mem before: $(free -h | grep Mem | awk '{print $4}')" >> $LOG_FILE
+          sync; echo 3 > /proc/sys/vm/drop_caches
+          echo "$(date '+%Y-%m-%d %H:%M:%S') - Mem cache cleared successfully. Free mem after: $(free -h | grep Mem | awk '{print $4}')" >> $LOG_FILE
+        owner: root
+        group: root
+        mode: '0740'
+
     - name: Ensure logrotate is installed
       apt:
         name: logrotate
@@ -32,12 +61,6 @@
     - name: Print logrotate debug output
       debug:
         var: logrotate_debug_output.stdout
-
-    - name: Set up mem-cache clearing script
-      copy:
-        src: clear_mem_cache.sh
-        dest: /scripts/clear_mem_cache.sh
-        mode: '0755'
 
     - name: Create systemd service for clear_mem_cache
       copy:
@@ -71,5 +94,5 @@
     - name: Enable & start the systemd timer
       systemd:
         name: clear_mem_cache.timer
-        enabled: true
+        enabled: yes
         state: started
