@@ -1,0 +1,75 @@
+---
+- name: Logrotate configuration for memory cache cleanup
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Ensure logrotate is installed
+      apt:
+        name: logrotate
+        state: present
+
+    - name: Create logrotate configuration file for clear_mem_cache
+      copy:
+        dest: /etc/logrotate.d/clear_mem_cache
+        content: |
+          /var/log/clear_mem_cache.log {
+              weekly                   # Rotate logs weekly
+              rotate 4                 # Keep logs for 4 weeks
+              compress                 # Compress rotated logs
+              delaycompress            # Delay compression for one rotation cycle
+              missingok                # Ignore errors if the log is missing
+              notifempty               # Do not rotate if the log is empty
+              create 640 root root     # Set permissions for the new log file
+              maxsize 50M              # Limit log size to 50MB per file
+          }
+
+    - name: Verify logrotate configuration is valid
+      shell: logrotate -d /etc/logrotate.d/clear_mem_cache
+      register: logrotate_debug_output
+      failed_when: logrotate_debug_output.stderr != ""
+
+    - name: Print logrotate debug output
+      debug:
+        var: logrotate_debug_output.stdout
+
+    - name: Set up mem-cache clearing script
+      copy:
+        src: clear_mem_cache.sh
+        dest: /scripts/clear_mem_cache.sh
+        mode: '0755'
+
+    - name: Create systemd service for clear_mem_cache
+      copy:
+        dest: /etc/systemd/system/clear_mem_cache.service
+        content: |
+          [Unit]
+          Description=Run memory cache clearing script
+          After=multi-user.target
+
+          [Service]
+          Type=oneshot
+          ExecStart=/scripts/clear_mem_cache.sh
+
+    - name: Create systemd timer for clear_mem_cache
+      copy:
+        dest: /etc/systemd/system/clear_mem_cache.timer
+        content: |
+          [Unit]
+          Description=Run clear_mem_cache.service periodically
+
+          [Timer]
+          OnCalendar=weekly
+          Persistent=true
+
+          [Install]
+          WantedBy=timers.target
+
+    - name: Reload systemd daemon
+      shell: systemctl daemon-reload
+
+    - name: Enable & start the systemd timer
+      systemd:
+        name: clear_mem_cache.timer
+        enabled: true
+        state: started
