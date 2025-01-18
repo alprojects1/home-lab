@@ -4,6 +4,11 @@
   become: yes
 
   tasks:
+    - name: Ensure logrotate is installed
+      apt:
+        name: logrotate
+        state: present
+
     - name: Ensure clear_mem_cache.log exists
       file:
         path: /var/log/clear_mem_cache.log
@@ -12,7 +17,42 @@
         group: root
         mode: '0640'
 
-    - name: Create mem-cache clearing script
+    - name: Ensure /scripts directory exists
+      file:
+        path: /scripts
+        state: directory
+        owner: root
+        group: root
+        mode: '0740'
+
+    - name: Create logrotate configuration file for clear_mem_cache
+      copy:
+        dest: /etc/logrotate.d/clear_mem_cache
+        content: |
+          /var/log/clear_mem_cache.log {
+              weekly
+              rotate 4
+              compress
+              delaycompress
+              missingok
+              notifempty
+              create 640 root root
+              maxsize 50M
+          }
+        owner: root
+        group: root
+        mode: '0640'
+
+    - name: Verify logrotate configuration is valid
+      shell: logrotate -d /etc/logrotate.d/clear_mem_cache
+      register: logrotate_debug_output
+      failed_when: "'error' in logrotate_debug_output.stderr"
+
+    - name: Print logrotate debug output
+      debug:
+        var: logrotate_debug_output.stdout
+
+    - name: Set up mem-cache clearing script
       copy:
         dest: /scripts/clear_mem_cache.sh
         content: |
@@ -33,35 +73,6 @@
         group: root
         mode: '0740'
 
-    - name: Ensure logrotate is installed
-      apt:
-        name: logrotate
-        state: present
-
-    - name: Create logrotate configuration file for clear_mem_cache
-      copy:
-        dest: /etc/logrotate.d/clear_mem_cache
-        content: |
-          /var/log/clear_mem_cache.log {
-              weekly                   # Rotate logs weekly
-              rotate 4                 # Keep logs for 4 weeks
-              compress                 # Compress rotated logs
-              delaycompress            # Delay compression for one rotation cycle
-              missingok                # Ignore errors if the log is missing
-              notifempty               # Do not rotate if the log is empty
-              create 640 root root     # Set permissions for the new log file
-              maxsize 50M              # Limit log size to 50MB per file
-          }
-
-    - name: Verify logrotate configuration is valid
-      shell: logrotate -d /etc/logrotate.d/clear_mem_cache
-      register: logrotate_debug_output
-      failed_when: logrotate_debug_output.stderr != ""
-
-    - name: Print logrotate debug output
-      debug:
-        var: logrotate_debug_output.stdout
-
     - name: Create systemd service for clear_mem_cache
       copy:
         dest: /etc/systemd/system/clear_mem_cache.service
@@ -73,6 +84,9 @@
           [Service]
           Type=oneshot
           ExecStart=/scripts/clear_mem_cache.sh
+        owner: root
+        group: root
+        mode: '0640'
 
     - name: Create systemd timer for clear_mem_cache
       copy:
@@ -87,6 +101,9 @@
 
           [Install]
           WantedBy=timers.target
+        owner: root
+        group: root
+        mode: '0640'
 
     - name: Reload systemd daemon
       shell: systemctl daemon-reload
@@ -94,5 +111,5 @@
     - name: Enable & start the systemd timer
       systemd:
         name: clear_mem_cache.timer
-        enabled: yes
+        enabled: true
         state: started
