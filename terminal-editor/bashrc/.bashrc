@@ -75,7 +75,13 @@ huntit() {
 }
 
 killit() {
-    pkill -f "$1"
+    echo "You sure you want to kill processes matching '$1'? (y/n)"
+    read -r confirm
+    if [[ "$confirm" == "y" ]]; then
+        pkill -f "$1"
+    else
+        echo "Aborted."
+    fi
 }
 
 backit() {
@@ -88,6 +94,16 @@ backit() {
         return 1
     fi
 
+    if [ ! -e "$src" ]; then
+        echo "Source path does not exist."
+        return 1
+    fi
+
+    if [ ! -d "$dest" ]; then
+        echo "Destination must be a directory."
+        return 1
+    fi
+
     tar -czvf "$dest/$filename-$(date +%Y%m%d%H%M%S).tar.gz" "$src"
 }
 
@@ -97,6 +113,16 @@ sendit() {
 
     if [ -z "$src" ] || [ -z "$dest" ]; then
         echo "Usage: sendit /path/to/source user@remote:/path/to/destination"
+        return 1
+    fi
+
+    if [ ! -e "$src" ]; then
+        echo "Source path does not exist."
+        return 1
+    fi
+
+    if ! command -v rsync >/dev/null; then
+        echo "rsync is not installed. Please install it first."
         return 1
     fi
 
