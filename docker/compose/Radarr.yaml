@@ -1,7 +1,7 @@
 ---
 services:
   radarr:
-    image: lscr.io/linuxserver/radarr:5.9.1.9070-ls234
+    image: lscr.io/linuxserver/radarr:5.17.2.9580-ls255
     container_name: radarr
     ports:
       - 7878:7878
@@ -15,7 +15,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     healthcheck:
-      test: ["CMD-SHELL", "curl --fail http://IP_ADDRESS:7878 || exit 0"]
+      test: ["CMD-SHELL", "curl --fail http://**************:7878 || exit 0"]
       interval: 40s
       timeout: 10s
       retries: 3
