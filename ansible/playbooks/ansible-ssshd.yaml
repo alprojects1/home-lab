@@ -2,15 +2,24 @@
 ---
 - name: Configure SSHD with more secure settings
   hosts: all
-  become: true  # Ensure we are using root for this operation
+  become: true
   tasks:
+    # Backup original SSH configuration
+    - name: Backup sshd_config before making changes
+      ansible.builtin.copy:
+        src: /etc/ssh/sshd_config
+        dest: /etc/ssh/sshd_config.bak
+        backup: yes
+
+    # Set SSH to listen on the correct port
     - name: Set SSH to listen on the correct port
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
         regexp: '^Port'
-        line: 'Port {{ ansible_port | default(22) }}'
+        line: 'Port {{ ansible_port | default(3100) }}'
         state: present
 
+    # Prohibit root login via SSH
     - name: Prohibit root login via SSH
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -18,6 +27,7 @@
         line: 'PermitRootLogin prohibit-password'
         state: present
 
+    # Allow specific user(s) to SSH
     - name: Allow specific user(s) to SSH
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -25,13 +35,15 @@
         line: 'AllowUsers admin'
         state: present
 
+    # Allow specific group(s) to SSH
     - name: Allow specific group(s) to SSH
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
         regexp: '^AllowGroups'
-        line: 'AllowGroups admin'
+        line: 'AllowGroups echo'
         state: present
 
+    # Enable public key authentication
     - name: Enable public key authentication
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -39,6 +51,7 @@
         line: 'PubkeyAuthentication yes'
         state: present
 
+    # Disable password authentication
     - name: Disable password authentication
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -46,6 +59,7 @@
         line: 'PasswordAuthentication no'
         state: present
 
+    # Disable empty passwords
     - name: Disable empty passwords
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -53,6 +67,23 @@
         line: 'PermitEmptyPasswords no'
         state: present
 
+    # Disable ChallengeResponseAuthentication
+    - name: Disable ChallengeResponseAuthentication
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^ChallengeResponseAuthentication'
+        line: 'ChallengeResponseAuthentication no'
+        state: present
+
+    # Disable KbdInteractiveAuthentication
+    - name: Disable KbdInteractiveAuthentication
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^KbdInteractiveAuthentication'
+        line: 'KbdInteractiveAuthentication no'
+        state: present
+
+    # Set MaxAuthTries to 1
     - name: Set MaxAuthTries to 1
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -60,6 +91,7 @@
         line: 'MaxAuthTries 1'
         state: present
 
+    # Set MaxSessions to 1
     - name: Set MaxSessions to 1
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -67,6 +99,7 @@
         line: 'MaxSessions 1'
         state: present
 
+    # Set LoginGraceTime to 1m
     - name: Set LoginGraceTime to 1m
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -74,6 +107,7 @@
         line: 'LoginGraceTime 1m'
         state: present
 
+    # Set AddressFamily to inet (IPv4 only)
     - name: Set AddressFamily to inet (IPv4 only)
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -81,6 +115,7 @@
         line: 'AddressFamily inet'
         state: present
 
+    # Use PAM
     - name: Use PAM
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
@@ -88,6 +123,50 @@
         line: 'UsePAM yes'
         state: present
 
+    # Configure strong ciphers, KexAlgorithms, and MACs
+    - name: Configure strong ciphers
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^Ciphers'
+        line: 'Ciphers aes256-gcm@openssh.com,chacha20-poly1305@openssh.com'
+        state: present
+
+    - name: Configure strong Key Exchange Algorithms
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^KexAlgorithms'
+        line: 'KexAlgorithms curve25519-sha256@libssh.org'
+        state: present
+
+    - name: Configure strong MACs
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^MACs'
+        line: 'MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com'
+        state: present
+
+    # Set SSH banner
+    - name: Set SSH banner
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^Banner'
+        line: 'Banner /etc/issue.net'
+        state: present
+
+    - name: Set security message in /etc/issue.net
+      ansible.builtin.copy:
+        dest: /etc/issue.net
+        content: |
+          WARNING: Welcome to Asgard unauthorized access to this system is prohibited.
+          All activities are monitored and logged.
+
+    # Ensure SSH service is enabled
+    - name: Ensure SSH service is enabled
+      ansible.builtin.service:
+        name: sshd
+        enabled: yes
+
+    # Restart SSH service to apply changes
     - name: Restart SSH service to apply changes
       ansible.builtin.service:
         name: sshd
