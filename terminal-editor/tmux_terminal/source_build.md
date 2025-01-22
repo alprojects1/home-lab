@@ -20,4 +20,4 @@
 17) git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect 
 18) Ctrl+a I **install plugins, terminal pointer should blink**
 19) ls ~/.tmux/plugins/ **should get tpm & tmux-resurrect**
-20)while read -r cmd; do history -s "$cmd"; done < ~/.bash_history **Bash history loop**
+20) while read -r cmd; do history -s "$cmd"; done < ~/.bash_history **Bash history loop**
